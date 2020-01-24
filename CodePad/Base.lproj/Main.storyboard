@@ -42,10 +42,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0JB-N3-Y1j" firstAttribute="leading" secondItem="BoZ-jc-2Y8" secondAttribute="leading" id="0ZO-ok-b5V"/>
-                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="trailing" secondItem="0JB-N3-Y1j" secondAttribute="trailing" id="Cgi-mA-bOz"/>
-                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="bottom" secondItem="0JB-N3-Y1j" secondAttribute="bottom" id="Rle-QB-bxU"/>
-                            <constraint firstItem="0JB-N3-Y1j" firstAttribute="top" secondItem="BoZ-jc-2Y8" secondAttribute="top" id="ehk-x0-Akl"/>
+                            <constraint firstItem="0JB-N3-Y1j" firstAttribute="leading" secondItem="SIE-Uh-Zny" secondAttribute="leading" id="0ZO-ok-b5V"/>
+                            <constraint firstAttribute="trailing" secondItem="0JB-N3-Y1j" secondAttribute="trailing" id="Cgi-mA-bOz"/>
+                            <constraint firstAttribute="bottom" secondItem="0JB-N3-Y1j" secondAttribute="bottom" id="Rle-QB-bxU"/>
+                            <constraint firstItem="0JB-N3-Y1j" firstAttribute="top" secondItem="SIE-Uh-Zny" secondAttribute="top" id="ehk-x0-Akl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BoZ-jc-2Y8"/>
                     </view>
