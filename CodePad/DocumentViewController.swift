@@ -7,39 +7,34 @@
 //
 
 import UIKit
+import WebKit
 
-class DocumentViewController: UIViewController {
-    
-    @IBOutlet weak var documentNameLabel: UILabel!
-    @IBOutlet weak var documentTypeLabel: UILabel!
-    @IBOutlet weak var documentContentLabel: UILabel!
-    
+class DocumentViewController: UIViewController, WKUIDelegate {
     var document: UIDocument?
+    var webView: WKWebView!
+    
+    override func loadView() {
+        let webConf = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConf)
+        webView.uiDelegate = self
+        view = webView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let url = Bundle.main.url(forResource: "TextEditor", withExtension: "html")!
+        webView.loadFileURL(url, allowingReadAccessTo: url)
+        let req = URLRequest(url: url)
+        webView.load(req)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Access the document
+
         document?.open(completionHandler: { (success) in
             if success {
-                // Display the content of the document, e.g.:
-                self.documentNameLabel.text = self.document?.fileURL.lastPathComponent
-                self.documentTypeLabel.text = self.document?.fileURL.pathExtension
-                do {
-                    let fileURL = self.document?.fileURL
-                    self.documentContentLabel.text = try String(contentsOf: fileURL!)
-                } catch {
-                    print("Error")
-                }
             } else {
-                // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
             }
         })
-    }
-    
-    @IBAction func dismissDocumentViewController() {
-        dismiss(animated: true) {
-            self.document?.close(completionHandler: nil)
-        }
     }
 }
