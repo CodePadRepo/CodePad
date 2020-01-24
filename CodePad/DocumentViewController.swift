@@ -11,19 +11,12 @@ import WebKit
 
 class DocumentViewController: UIViewController, WKUIDelegate {
     var document: UIDocument?
-    var webView: WKWebView!
-    
-    override func loadView() {
-        let webConf = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConf)
-        webView.uiDelegate = self
-        view = webView
-    }
-    
+    @IBOutlet weak var editorView: WKWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = Bundle.main.url(forResource: "TextEditor", withExtension: "html")!
-        webView.loadFileURL(url, allowingReadAccessTo: url)
+        editorView.loadFileURL(url, allowingReadAccessTo: url)
     }
     
     override func viewWillAppear(_ animated: Bool) {
