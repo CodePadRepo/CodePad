@@ -24,8 +24,6 @@ class DocumentViewController: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         let url = Bundle.main.url(forResource: "TextEditor", withExtension: "html")!
         webView.loadFileURL(url, allowingReadAccessTo: url)
-        let req = URLRequest(url: url)
-        webView.load(req)
     }
     
     override func viewWillAppear(_ animated: Bool) {

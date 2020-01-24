@@ -17,6 +17,7 @@
 		66307FE123C4D21300AE7027 /* CodePadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FE023C4D21300AE7027 /* CodePadTests.swift */; };
 		66307FEC23C4D21400AE7027 /* CodePadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FEB23C4D21400AE7027 /* CodePadUITests.swift */; };
 		665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 665C0F9F23DAC05600E29BA4 /* TextEditor.html */; };
+		665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 665C0FA323DAC56100E29BA4 /* TextEditor.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		66307FED23C4D21400AE7027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66307FF923C4D27D00AE7027 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		665C0F9F23DAC05600E29BA4 /* TextEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TextEditor.html; sourceTree = "<group>"; };
+		665C0FA323DAC56100E29BA4 /* TextEditor.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = TextEditor.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				665C0F9F23DAC05600E29BA4 /* TextEditor.html */,
+				665C0FA323DAC56100E29BA4 /* TextEditor.css */,
 			);
 			path = "Web Resources";
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				66307FD323C4D21300AE7027 /* Assets.xcassets in Resources */,
 				665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */,
 				66307FD123C4D21100AE7027 /* Main.storyboard in Resources */,
+				665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
