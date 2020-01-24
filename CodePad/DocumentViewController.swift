@@ -17,6 +17,11 @@ class DocumentViewController: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         let url = Bundle.main.url(forResource: "TextEditor", withExtension: "html")!
         editorView.loadFileURL(url, allowingReadAccessTo: url)
+        editorView.scrollView.delegate = self
+    }
+    
+    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+             scrollView.pinchGestureRecognizer?.isEnabled = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,5 +47,11 @@ class DocumentViewController: UIViewController, WKUIDelegate {
                 // TODO: Add proper error handling
             }
         })
+    }
+}
+
+extension DocumentViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return nil
     }
 }
