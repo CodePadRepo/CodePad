@@ -18,6 +18,7 @@
 		66307FEC23C4D21400AE7027 /* CodePadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FEB23C4D21400AE7027 /* CodePadUITests.swift */; };
 		665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 665C0F9F23DAC05600E29BA4 /* TextEditor.html */; };
 		665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 665C0FA323DAC56100E29BA4 /* TextEditor.css */; };
+		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		66307FF923C4D27D00AE7027 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		665C0F9F23DAC05600E29BA4 /* TextEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TextEditor.html; sourceTree = "<group>"; };
 		665C0FA323DAC56100E29BA4 /* TextEditor.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = TextEditor.css; sourceTree = "<group>"; };
+		665C0FA623DAD13B00E29BA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +94,7 @@
 				66307FDF23C4D21300AE7027 /* CodePadTests */,
 				66307FEA23C4D21400AE7027 /* CodePadUITests */,
 				66307FC523C4D21100AE7027 /* Products */,
+				665C0FA523DAD13B00E29BA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +149,14 @@
 				665C0FA323DAC56100E29BA4 /* TextEditor.css */,
 			);
 			path = "Web Resources";
+			sourceTree = "<group>";
+		};
+		665C0FA523DAD13B00E29BA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				665C0FA623DAD13B00E29BA4 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
