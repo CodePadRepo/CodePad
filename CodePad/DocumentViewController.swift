@@ -12,6 +12,7 @@ class DocumentViewController: UIViewController {
     
     @IBOutlet weak var documentNameLabel: UILabel!
     @IBOutlet weak var documentTypeLabel: UILabel!
+    @IBOutlet weak var documentContentLabel: UILabel!
     
     var document: UIDocument?
     
@@ -24,6 +25,12 @@ class DocumentViewController: UIViewController {
                 // Display the content of the document, e.g.:
                 self.documentNameLabel.text = self.document?.fileURL.lastPathComponent
                 self.documentTypeLabel.text = self.document?.fileURL.pathExtension
+                do {
+                    let fileURL = self.document?.fileURL
+                    self.documentContentLabel.text = try String(contentsOf: fileURL!)
+                } catch {
+                    print("Error")
+                }
             } else {
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
             }
