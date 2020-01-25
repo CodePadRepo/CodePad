@@ -11,13 +11,13 @@ import WebKit
 
 class DocumentViewController: UIViewController, WKUIDelegate {
     var document: UIDocument?
-    @IBOutlet weak var editorView: WKWebView!
+    @IBOutlet weak var webView: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = Bundle.main.url(forResource: "TextEditor", withExtension: "html")!
-        editorView.loadFileURL(url, allowingReadAccessTo: url)
-        editorView.scrollView.delegate = self
+        webView.loadFileURL(url, allowingReadAccessTo: url)
+        webView.scrollView.delegate = self
     }
     
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
@@ -30,7 +30,7 @@ class DocumentViewController: UIViewController, WKUIDelegate {
         document?.open(completionHandler: { (success) in
             if success {
                 do {
-                    self.editorView.evaluateJavaScript(
+                    self.webView.evaluateJavaScript(
                         "document.body.querySelector('#editor').innerText = `\(try String(contentsOf: self.document!.fileURL))`"
                     ) { (result, error) in
                         if error != nil {
