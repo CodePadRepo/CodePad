@@ -36,8 +36,6 @@ class DocumentViewController: UIViewController, WKUIDelegate {
                         // TODO: Add proper error handling
                         if error != nil {
                             print(error!)
-                        } else {
-                            print(result!)
                         }
                     }
                 } catch {
