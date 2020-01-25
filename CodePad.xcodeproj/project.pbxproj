@@ -19,6 +19,7 @@
 		665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 665C0F9F23DAC05600E29BA4 /* TextEditor.html */; };
 		665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 665C0FA323DAC56100E29BA4 /* TextEditor.css */; };
 		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
+		6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 6683ADAF23DBDEE7004ADADD /* TextEditor.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		665C0F9F23DAC05600E29BA4 /* TextEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TextEditor.html; sourceTree = "<group>"; };
 		665C0FA323DAC56100E29BA4 /* TextEditor.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = TextEditor.css; sourceTree = "<group>"; };
 		665C0FA623DAD13B00E29BA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		6683ADAF23DBDEE7004ADADD /* TextEditor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TextEditor.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				665C0F9F23DAC05600E29BA4 /* TextEditor.html */,
 				665C0FA323DAC56100E29BA4 /* TextEditor.css */,
+				6683ADAF23DBDEE7004ADADD /* TextEditor.js */,
 			);
 			path = "Web Resources";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				66307FD323C4D21300AE7027 /* Assets.xcassets in Resources */,
 				665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */,
 				66307FD123C4D21100AE7027 /* Main.storyboard in Resources */,
+				6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */,
 				665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
