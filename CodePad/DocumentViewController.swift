@@ -21,7 +21,7 @@ class DocumentViewController: UIViewController, WKUIDelegate {
     }
     
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
-             scrollView.pinchGestureRecognizer?.isEnabled = false
+        scrollView.pinchGestureRecognizer?.isEnabled = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
