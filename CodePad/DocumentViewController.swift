@@ -33,16 +33,16 @@ class DocumentViewController: UIViewController, WKUIDelegate {
                     self.editorView.evaluateJavaScript(
                         "document.body.querySelector('#editor').innerText = `\(try String(contentsOf: self.document!.fileURL))`"
                     ) { (result, error) in
-                        // TODO: Add proper error handling
                         if error != nil {
+                            print("Failed to change innerText")
                             print(error!)
                         }
                     }
                 } catch {
-                    print("Failed to open file")
+                    print("Failed to read file content")
                 }
             } else {
-                // TODO: Add proper error handling
+                print("Failed to open file")
             }
         })
     }
