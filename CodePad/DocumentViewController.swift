@@ -36,25 +36,6 @@ class DocumentViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        document?.open(completionHandler: { (success) in
-            if success {
-                do {
-                    self.webView.evaluateJavaScript(
-                        "document.body.querySelector('#editor').innerText = `\(try String(contentsOf: self.document!.fileURL))`"
-                    ) { (result, error) in
-                        if error != nil {
-                            print("Failed to change innerText")
-                            print(error!)
-                        }
-                    }
-                } catch {
-                    print("Failed to read file content")
-                }
-            } else {
-                print("Failed to open file")
-            }
-        })
     }
 }
 
@@ -81,18 +62,42 @@ extension DocumentViewController: WKScriptMessageHandler {
                     return
             }
             switch event {
-            case "text_change":
-                document?.open(completionHandler: { (success) in
-                    if success {
-                        let fileContents: String = data[0] as! String
-                        do {
-                            print("Writing to file...")
-                            try fileContents.write(to: self.document!.fileURL, atomically: true, encoding: String.Encoding.utf8)
-                        } catch {
-                            print("Failed to write to file")
+            case "editor_ready":
+                do {
+                    self.webView.evaluateJavaScript(
+                        "editor.session.setValue(`\(try String(contentsOf: self.document!.fileURL))`);"
+                    ) { (result, error) in
+                        if error != nil {
+                            print("Failed to change innerText")
+                            print(error!)
                         }
                     }
-                })
+                } catch {
+                    print("Failed to read file content")
+                }
+                self.webView.evaluateJavaScript("""
+editor.session.on("change", () => {
+    console.log("Text changed");
+    window.webkit.messageHandlers.editorMessageHandler.postMessage({
+        event: "text_change",
+        data: [editor.getValue()]
+    });
+});
+"""
+                ) { (result, error) in
+                    if error != nil {
+                        print("Failed to register change event")
+                        print(error!)
+                    }
+                }
+            case "text_change":
+                let fileContents: String = data[0] as! String
+                do {
+                    print("Writing to file...")
+                    try fileContents.write(to: self.document!.fileURL, atomically: true, encoding: String.Encoding.utf8)
+                } catch {
+                    print("Failed to write to file")
+                }
             default:
                 print("Unknown event: \(event)")
             }

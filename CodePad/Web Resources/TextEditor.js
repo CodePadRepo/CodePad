@@ -1,8 +1,8 @@
-const editorElem = document.body.querySelector("#editor");
-editorElem.addEventListener('input', (event) => {
-    console.log("Text changed");
-    window.webkit.messageHandlers.editorMessageHandler.postMessage({
-        event: "text_change",
-        data: [editorElem.innerText]
-    });
+const editor = ace.edit("editor");
+editor.setTheme("ace/theme/gruvbox");
+editor.session.setMode("ace/mode/python");
+
+window.webkit.messageHandlers.editorMessageHandler.postMessage({
+    event: "editor_ready",
+    data: []
 });
