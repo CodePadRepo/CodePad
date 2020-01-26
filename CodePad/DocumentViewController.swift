@@ -18,6 +18,7 @@ class DocumentViewController: UIViewController {
         let conf = WKWebViewConfiguration()
         conf.userContentController.add(self, name: "editorMessageHandler")
         webView = WKWebView(frame: .zero, configuration: conf)
+        webView.scrollView.isScrollEnabled = false
         view.addSubview(webView)
         let layoutGuide = view.safeAreaLayoutGuide
         webView.translatesAutoresizingMaskIntoConstraints = false
