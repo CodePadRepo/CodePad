@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CodePad.xcodeproj">
+      location = "group:/Users/ryangsohn/Documents/CodePad/CodePad/Web Resources/src">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
