@@ -12,6 +12,7 @@ CodePad is a simple code editor for iOS. It is currently work-in-progress.
 - [x] Syntax highlighting
 - [ ] Filetype detection for syntax highlighting
 - [ ] Configuration menus
+- [ ] Start beta testing
 
 ### `P0.5`: Not necessary, but needed for long-term maintenance
 - [ ] Proper logging
