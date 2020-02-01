@@ -31,6 +31,43 @@ class DocumentViewController: UIViewController {
         webView.scrollView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    @objc func adjustForKeyboard(notification: Notification) {
+        print("Keyboard Change")
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        print(keyboardValue)
+        
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        print("keyboardViewEndFrame = \(keyboardViewEndFrame)")
+        
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            self.webView.evaluateJavaScript("document.body.style.height = '\(webView.frame.height)px';editor.resize(true);") { (result, error) in
+                if error != nil {
+                    print("Failed to resize editor")
+                    print(error!)
+                }
+            }
+        } else {
+            self.webView.evaluateJavaScript("document.body.style.height = '\(webView.frame.height -  keyboardViewEndFrame.height + view.safeAreaInsets.bottom)px';editor.resize(true);") { (result, error) in
+                if error != nil {
+                    print("Failed to resize editor")
+                    print(error!)
+                }
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
         scrollView.pinchGestureRecognizer?.isEnabled = false
     }
