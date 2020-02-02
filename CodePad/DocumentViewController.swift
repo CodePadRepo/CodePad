@@ -38,26 +38,38 @@ class DocumentViewController: UIViewController {
     }
     
     @objc func adjustForKeyboard(notification: Notification) {
+        #if targetEnvironment(simulator)
         print("Keyboard Change")
+        #endif
+        
         guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
+        #if targetEnvironment(simulator)
         print(keyboardValue)
+        #endif
         
         let keyboardScreenEndFrame = keyboardValue.cgRectValue
         let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        #if targetEnvironment(simulator)
         print("keyboardViewEndFrame = \(keyboardViewEndFrame)")
+        #endif
         
         if notification.name == UIResponder.keyboardWillHideNotification {
             self.webView.evaluateJavaScript("document.body.style.height = '\(webView.frame.height)px';editor.resize(true);") { (result, error) in
                 if error != nil {
+                    #if targetEnvironment(simulator)
                     print("Failed to resize editor")
                     debugPrint(error!)
+                    #endif
                 }
             }
         } else {
             self.webView.evaluateJavaScript("document.body.style.height = '\(webView.frame.height -  keyboardViewEndFrame.height + view.safeAreaInsets.bottom)px';editor.resize(true);") { (result, error) in
                 if error != nil {
+                    #if targetEnvironment(simulator)
                     print("Failed to resize editor")
                     debugPrint(error!)
+                    #endif
                 }
             }
         }
@@ -102,12 +114,16 @@ extension DocumentViewController: WKScriptMessageHandler {
                         "editor.session.setValue(`\(try String(contentsOf: self.document!.fileURL))`);"
                     ) { (result, error) in
                         if error != nil {
+                            #if targetEnvironment(simulator)
                             print("Failed to change innerText")
                             debugPrint(error!)
+                            #endif
                         }
                     }
                 } catch {
+                    #if targetEnvironment(simulator)
                     print("Failed to read file content")
+                    #endif
                 }
                 self.webView.evaluateJavaScript("""
 editor.session.on("change", () => {
@@ -120,20 +136,28 @@ editor.session.on("change", () => {
 """
                 ) { (result, error) in
                     if error != nil {
+                        #if targetEnvironment(simulator)
                         print("Failed to register change event")
                         debugPrint(error!)
+                        #endif
                     }
                 }
             case "text_change":
                 let fileContents: String = data[0] as! String
                 do {
+                    #if targetEnvironment(simulator)
                     print("Writing to file...")
+                    #endif
                     try fileContents.write(to: self.document!.fileURL, atomically: true, encoding: String.Encoding.utf8)
                 } catch {
+                    #if targetEnvironment(simulator)
                     print("Failed to write to file")
+                    #endif
                 }
             default:
+                #if targetEnvironment(simulator)
                 print("Unknown event: \(event)")
+                #endif
             }
         }
     }
