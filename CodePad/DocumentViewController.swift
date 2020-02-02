@@ -50,14 +50,14 @@ class DocumentViewController: UIViewController {
             self.webView.evaluateJavaScript("document.body.style.height = '\(webView.frame.height)px';editor.resize(true);") { (result, error) in
                 if error != nil {
                     print("Failed to resize editor")
-                    print(error!)
+                    debugPrint(error!)
                 }
             }
         } else {
             self.webView.evaluateJavaScript("document.body.style.height = '\(webView.frame.height -  keyboardViewEndFrame.height + view.safeAreaInsets.bottom)px';editor.resize(true);") { (result, error) in
                 if error != nil {
                     print("Failed to resize editor")
-                    print(error!)
+                    debugPrint(error!)
                 }
             }
         }
@@ -103,7 +103,7 @@ extension DocumentViewController: WKScriptMessageHandler {
                     ) { (result, error) in
                         if error != nil {
                             print("Failed to change innerText")
-                            print(error!)
+                            debugPrint(error!)
                         }
                     }
                 } catch {
@@ -121,7 +121,7 @@ editor.session.on("change", () => {
                 ) { (result, error) in
                     if error != nil {
                         print("Failed to register change event")
-                        print(error!)
+                        debugPrint(error!)
                     }
                 }
             case "text_change":
