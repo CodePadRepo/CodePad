@@ -16,6 +16,8 @@
 		66307FD623C4D21300AE7027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */; };
 		66307FE123C4D21300AE7027 /* CodePadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FE023C4D21300AE7027 /* CodePadTests.swift */; };
 		66307FEC23C4D21400AE7027 /* CodePadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FEB23C4D21400AE7027 /* CodePadUITests.swift */; };
+		664C718A23E6B1C0005FEBC0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 664C718923E6B1C0005FEBC0 /* Settings.bundle */; };
+		664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */; };
 		665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 665C0F9F23DAC05600E29BA4 /* TextEditor.html */; };
 		665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 665C0FA323DAC56100E29BA4 /* TextEditor.css */; };
 		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
@@ -57,6 +59,8 @@
 		66307FEB23C4D21400AE7027 /* CodePadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadUITests.swift; sourceTree = "<group>"; };
 		66307FED23C4D21400AE7027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66307FF923C4D27D00AE7027 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		664C718923E6B1C0005FEBC0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstsHelper.swift; sourceTree = "<group>"; };
 		665C0F9F23DAC05600E29BA4 /* TextEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TextEditor.html; sourceTree = "<group>"; };
 		665C0FA323DAC56100E29BA4 /* TextEditor.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = TextEditor.css; sourceTree = "<group>"; };
 		665C0FA623DAD13B00E29BA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -93,6 +97,7 @@
 		66307FBB23C4D21100AE7027 = {
 			isa = PBXGroup;
 			children = (
+				664C718923E6B1C0005FEBC0 /* Settings.bundle */,
 				66307FF923C4D27D00AE7027 /* README.md */,
 				66307FC623C4D21100AE7027 /* CodePad */,
 				66307FDF23C4D21300AE7027 /* CodePadTests */,
@@ -120,6 +125,7 @@
 				66307FC923C4D21100AE7027 /* DocumentBrowserViewController.swift */,
 				66307FCB23C4D21100AE7027 /* DocumentViewController.swift */,
 				66307FCD23C4D21100AE7027 /* Document.swift */,
+				664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */,
 				66307FCF23C4D21100AE7027 /* Main.storyboard */,
 				66307FD223C4D21300AE7027 /* Assets.xcassets */,
 				66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */,
@@ -274,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				664C718A23E6B1C0005FEBC0 /* Settings.bundle in Resources */,
 				66307FD623C4D21300AE7027 /* LaunchScreen.storyboard in Resources */,
 				66307FD323C4D21300AE7027 /* Assets.xcassets in Resources */,
 				665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */,
@@ -306,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66307FCE23C4D21100AE7027 /* Document.swift in Sources */,
+				664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */,
 				66307FCC23C4D21100AE7027 /* DocumentViewController.swift in Sources */,
 				66307FCA23C4D21100AE7027 /* DocumentBrowserViewController.swift in Sources */,
 				66307FC823C4D21100AE7027 /* AppDelegate.swift in Sources */,

@@ -12,6 +12,7 @@ import WebKit
 class DocumentViewController: UIViewController {
     var document: UIDocument?
     var webView: WKWebView!
+    var theme: String!
 
     fileprivate func prepareWebView() {
         let conf = WKWebViewConfiguration()
@@ -30,9 +31,27 @@ class DocumentViewController: UIViewController {
         webView.scrollView.delegate = self
     }
     
+    fileprivate func loadSettings() {
+        let defaults = UserDefaults.standard
+        if let themeIndex = defaults.string(forKey: "colorTheme") {
+            let readableThemeName = GlobalConstsHelper.colorThemes[Int(themeIndex)!]
+            let processedThemeName = readableThemeName.replacingOccurrences(of: " ", with: "_").lowercased()
+            self.theme = processedThemeName
+            #if targetEnvironment(simulator)
+            print("Color theme set to: \(String(describing: self.theme))")
+            #endif
+        } else {
+            self.theme = "Gruvbox"
+            #if targetEnvironment(simulator)
+            print("Color theme not set")
+            #endif
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareWebView()
+        loadSettings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -157,6 +176,16 @@ editor.session.on("change", () => {
                     #if targetEnvironment(simulator)
                     print("Failed to write to file")
                     #endif
+                }
+            case "request_init":
+                let theme = self.theme!
+                self.webView.evaluateJavaScript("initializeEditor('\(theme)', 'python')") { (result, error) in
+                    if error != nil {
+                        #if targetEnvironment(simulator)
+                        print("Failed to initialize editor")
+                        debugPrint(error!)
+                        #endif
+                    }
                 }
             default:
                 #if targetEnvironment(simulator)

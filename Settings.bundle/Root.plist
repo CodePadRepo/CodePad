@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>APPEARANCES</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Color Theme</string>
+			<key>Titles</key>
+			<array>
+				<string>Chrome</string>
+				<string>Clouds</string>
+				<string>Crimson Editor</string>
+				<string>Dawn</string>
+				<string>Dreamweaver</string>
+				<string>Eclipse</string>
+				<string>GitHub</string>
+				<string>IPlastic</string>
+				<string>Solarized Light</string>
+				<string>TextMate</string>
+				<string>Tomorrow</string>
+				<string>XCode</string>
+				<string>Kuroir</string>
+				<string>KatzenMilch</string>
+				<string>SQL Server</string>
+				<string>Ambiance</string>
+				<string>Chaos</string>
+				<string>Clouds Midnight</string>
+				<string>Dracula</string>
+				<string>Cobalt</string>
+				<string>Gruvbox</string>
+				<string>Green on Black</string>
+				<string>idle Fingers</string>
+				<string>krTheme</string>
+				<string>Merbivore</string>
+				<string>Merbivore Soft</string>
+				<string>Mono Industrial</string>
+				<string>Monokai</string>
+				<string>Pastel on dark</string>
+				<string>Solarized Dark</string>
+				<string>Terminal</string>
+				<string>Tomorrow Night</string>
+				<string>Tomorrow Night Blue</string>
+				<string>Tomorrow Night Bright</string>
+				<string>Tomorrow Night 80s</string>
+				<string>Twilight</string>
+				<string>Vibrant Ink</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+				<string>6</string>
+				<string>7</string>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+				<string>11</string>
+				<string>12</string>
+				<string>13</string>
+				<string>14</string>
+				<string>15</string>
+				<string>16</string>
+				<string>17</string>
+				<string>18</string>
+				<string>19</string>
+				<string>20</string>
+				<string>21</string>
+				<string>22</string>
+				<string>23</string>
+				<string>24</string>
+				<string>25</string>
+				<string>26</string>
+				<string>27</string>
+				<string>28</string>
+				<string>29</string>
+				<string>30</string>
+				<string>31</string>
+				<string>32</string>
+				<string>33</string>
+				<string>34</string>
+				<string>35</string>
+				<string>36</string>
+			</array>
+			<key>Key</key>
+			<string>colorTheme</string>
+			<key>DefaultValue</key>
+			<string>20</string>
+		</dict>
+	</array>
+</dict>
+</plist>
