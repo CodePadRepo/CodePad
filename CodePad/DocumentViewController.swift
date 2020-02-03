@@ -13,8 +13,7 @@ class DocumentViewController: UIViewController {
     var document: UIDocument?
     var webView: WKWebView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func prepareWebView() {
         let conf = WKWebViewConfiguration()
         conf.userContentController.add(self, name: "editorMessageHandler")
         webView = WKWebView(frame: .zero, configuration: conf)
@@ -29,6 +28,11 @@ class DocumentViewController: UIViewController {
         let url = Bundle.main.url(forResource: "TextEditor", withExtension: "html")!
         webView.loadFileURL(url, allowingReadAccessTo: url)
         webView.scrollView.delegate = self
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        prepareWebView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
