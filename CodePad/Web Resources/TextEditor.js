@@ -1,7 +1,10 @@
-initializeEditor = (theme, mode) => {
+modelist = ace.require("ace/ext/modelist");
+
+initializeEditor = (theme, filename) => {
     editor = ace.edit("editor");
     editor.setTheme(`ace/theme/${theme}`);
-    editor.session.setMode(`ace/mode/${mode}`);
+    const mode = modelist.getModeForPath(filename).mode
+    editor.session.setMode(mode);
     
     window.webkit.messageHandlers.editorMessageHandler.postMessage({
         event: "editor_ready",

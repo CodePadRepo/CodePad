@@ -179,7 +179,8 @@ editor.session.on("change", () => {
                 }
             case "request_init":
                 let theme = self.theme!
-                self.webView.evaluateJavaScript("initializeEditor('\(theme)', 'python')") { (result, error) in
+                let filename = self.document!.fileURL.lastPathComponent
+                self.webView.evaluateJavaScript("initializeEditor('\(theme)', '\(filename)')") { (result, error) in
                     if error != nil {
                         #if targetEnvironment(simulator)
                         print("Failed to initialize editor")
