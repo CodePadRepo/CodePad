@@ -23,6 +23,7 @@
 		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
 		6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 6683ADAF23DBDEE7004ADADD /* TextEditor.js */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
+		66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE439F23EB00A800CBE703 /* URLHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		665C0FA623DAD13B00E29BA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		6683ADAF23DBDEE7004ADADD /* TextEditor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TextEditor.js; sourceTree = "<group>"; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
+		66FE439F23EB00A800CBE703 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				66307FC723C4D21100AE7027 /* AppDelegate.swift */,
 				665C0FA223DAC3B800E29BA4 /* Web Resources */,
 				66307FC923C4D21100AE7027 /* DocumentBrowserViewController.swift */,
+				66FE439F23EB00A800CBE703 /* URLHelper.swift */,
 				66307FCB23C4D21100AE7027 /* DocumentViewController.swift */,
 				66307FCD23C4D21100AE7027 /* Document.swift */,
 				664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */,
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */,
 				66307FCE23C4D21100AE7027 /* Document.swift in Sources */,
 				664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */,
 				66307FCC23C4D21100AE7027 /* DocumentViewController.swift in Sources */,
