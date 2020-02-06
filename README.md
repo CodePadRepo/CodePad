@@ -1,5 +1,8 @@
 #  CodePad: a simple iOS code editor
 
+[![GitHub license](https://img.shields.io/github/license/sohnryang/CodePad)](https://github.com/sohnryang/CodePad/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/sohnryang/CodePad)](https://github.com/sohnryang/CodePad/issues)
+
 ## What?
 
 CodePad is a simple code editor for iOS. It is currently work-in-progress.
