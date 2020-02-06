@@ -124,11 +124,9 @@
 			children = (
 				66307FC723C4D21100AE7027 /* AppDelegate.swift */,
 				665C0FA223DAC3B800E29BA4 /* Web Resources */,
-				66307FC923C4D21100AE7027 /* DocumentBrowserViewController.swift */,
-				66FE439F23EB00A800CBE703 /* URLHelper.swift */,
-				66307FCB23C4D21100AE7027 /* DocumentViewController.swift */,
+				668BA9AC23EC540800C872A9 /* View Controllers */,
 				66307FCD23C4D21100AE7027 /* Document.swift */,
-				664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */,
+				668BA9AB23EC53ED00C872A9 /* Helpers */,
 				66307FCF23C4D21100AE7027 /* Main.storyboard */,
 				66307FD223C4D21300AE7027 /* Assets.xcassets */,
 				66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */,
@@ -172,6 +170,24 @@
 				665C0FA623DAD13B00E29BA4 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		668BA9AB23EC53ED00C872A9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66FE439F23EB00A800CBE703 /* URLHelper.swift */,
+				664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		668BA9AC23EC540800C872A9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				66307FC923C4D21100AE7027 /* DocumentBrowserViewController.swift */,
+				66307FCB23C4D21100AE7027 /* DocumentViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
