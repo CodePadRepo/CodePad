@@ -10,7 +10,7 @@
 		66307FC823C4D21100AE7027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FC723C4D21100AE7027 /* AppDelegate.swift */; };
 		66307FCA23C4D21100AE7027 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FC923C4D21100AE7027 /* DocumentBrowserViewController.swift */; };
 		66307FCC23C4D21100AE7027 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FCB23C4D21100AE7027 /* DocumentViewController.swift */; };
-		66307FCE23C4D21100AE7027 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FCD23C4D21100AE7027 /* Document.swift */; };
+		66307FCE23C4D21100AE7027 /* CodePadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FCD23C4D21100AE7027 /* CodePadDocument.swift */; };
 		66307FD123C4D21100AE7027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66307FCF23C4D21100AE7027 /* Main.storyboard */; };
 		66307FD323C4D21300AE7027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66307FD223C4D21300AE7027 /* Assets.xcassets */; };
 		66307FD623C4D21300AE7027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */; };
@@ -48,7 +48,7 @@
 		66307FC723C4D21100AE7027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66307FC923C4D21100AE7027 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		66307FCB23C4D21100AE7027 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
-		66307FCD23C4D21100AE7027 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		66307FCD23C4D21100AE7027 /* CodePadDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadDocument.swift; sourceTree = "<group>"; };
 		66307FD023C4D21100AE7027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66307FD223C4D21300AE7027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66307FD523C4D21300AE7027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,10 +122,10 @@
 		66307FC623C4D21100AE7027 /* CodePad */ = {
 			isa = PBXGroup;
 			children = (
-				66307FC723C4D21100AE7027 /* AppDelegate.swift */,
+				66B3519923EE6FEC008DD45D /* Infrastructure */,
 				665C0FA223DAC3B800E29BA4 /* Web Resources */,
 				668BA9AC23EC540800C872A9 /* View Controllers */,
-				66307FCD23C4D21100AE7027 /* Document.swift */,
+				66307FCD23C4D21100AE7027 /* CodePadDocument.swift */,
 				668BA9AB23EC53ED00C872A9 /* Helpers */,
 				66307FCF23C4D21100AE7027 /* Main.storyboard */,
 				66307FD223C4D21300AE7027 /* Assets.xcassets */,
@@ -188,6 +188,14 @@
 				66307FCB23C4D21100AE7027 /* DocumentViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		66B3519923EE6FEC008DD45D /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				66307FC723C4D21100AE7027 /* AppDelegate.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,7 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */,
-				66307FCE23C4D21100AE7027 /* Document.swift in Sources */,
+				66307FCE23C4D21100AE7027 /* CodePadDocument.swift in Sources */,
 				664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */,
 				66307FCC23C4D21100AE7027 /* DocumentViewController.swift in Sources */,
 				66307FCA23C4D21100AE7027 /* DocumentBrowserViewController.swift in Sources */,
