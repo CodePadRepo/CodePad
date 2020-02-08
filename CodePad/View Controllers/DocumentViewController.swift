@@ -167,17 +167,6 @@ editor.session.on("change", () => {
                 print("Writing to file...")
                 #endif
                 self.document!.save(to: document!.fileURL, for: .forOverwriting, completionHandler: nil)
-            case "request_init":
-                let theme = self.theme!
-                let filename = self.document!.fileURL.lastPathComponent
-                self.webView.evaluateJavaScript("initializeEditor('\(theme)', '\(filename)')") { (result, error) in
-                    if error != nil {
-                        #if targetEnvironment(simulator)
-                        print("Failed to initialize editor")
-                        debugPrint(error!)
-                        #endif
-                    }
-                }
             default:
                 #if targetEnvironment(simulator)
                 print("Unknown event: \(event)")

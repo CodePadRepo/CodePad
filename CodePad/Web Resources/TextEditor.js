@@ -19,6 +19,6 @@ initializeEditor = (theme, filename, editorContent) => {
 };
 
 window.webkit.messageHandlers.editorMessageHandler.postMessage({
-    event: "request_init",
+    event: "editor_ready",
     data: []
 });
