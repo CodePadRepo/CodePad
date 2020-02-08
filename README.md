@@ -2,6 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/sohnryang/CodePad)](https://github.com/sohnryang/CodePad/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/sohnryang/CodePad)](https://github.com/sohnryang/CodePad/issues)
+[![Build Status](https://travis-ci.com/sohnryang/CodePad.svg?branch=master)](https://travis-ci.com/sohnryang/CodePad)
 
 ## What?
 
