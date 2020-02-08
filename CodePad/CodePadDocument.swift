@@ -6,17 +6,21 @@
 //  Copyright © 2020 Ryang Sohn. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class Document: UIDocument {
+class CodePadDocument: UIDocument {
+    var code: String?
     
     override func contents(forType typeName: String) throws -> Any {
-        // Encode your document with an instance of NSData or NSFileWrapper
-        return Data()
+        // TODO: Add customizable encodings
+        return self.code!.data(using: .utf8) as Any
     }
     
     override func load(fromContents contents: Any, ofType typeName: String?) throws {
-        // Load your document from contents
+        // TODO: Add customizable encodings
+        let fileData: Data = contents as! Data
+        self.code = String(data: fileData, encoding: .utf8)
     }
 }
 
