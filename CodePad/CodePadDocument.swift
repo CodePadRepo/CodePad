@@ -1,5 +1,5 @@
 //
-//  Document.swift
+//  CodePadDocument.swift
 //  CodePad
 //
 //  Created by Ryang Sohn on 2020/01/07.

@@ -1,5 +1,5 @@
 //
-//  GlobalConsts.swift
+//  GlobalConstsHelper.swift
 //  CodePad
 //
 //  Created by Ryang Sohn on 2020/02/03.
