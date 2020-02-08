@@ -52,7 +52,6 @@ class DocumentViewController: UIViewController {
         super.viewDidLoad()
         prepareWebView()
         loadSettings()
-        self.document!.open(completionHandler: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,6 +98,19 @@ class DocumentViewController: UIViewController {
         }
     }
     
+    fileprivate func initializeEditor() {
+        let theme = self.theme!
+        let filename = self.document!.fileURL.lastPathComponent
+        self.webView.evaluateJavaScript("initializeEditor('\(theme)', '\(filename)', `\(document!.code)`)") { (result, error) in
+            if error != nil {
+                #if targetEnvironment(simulator)
+                print("Failed to initialize editor")
+                debugPrint(error!)
+                #endif
+            }
+        }
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
@@ -133,33 +145,14 @@ extension DocumentViewController: WKScriptMessageHandler {
             }
             switch event {
             case "editor_ready":
-                self.webView.evaluateJavaScript(
-                    "editor.session.setValue(`\(document!.code)`);"
-                ) { (result, error) in
-                    if error != nil {
-                        #if targetEnvironment(simulator)
-                        print("Failed to change innerText")
-                        debugPrint(error!)
-                        #endif
+                self.document!.open(completionHandler: { (success) in
+                    guard success else {
+                        fatalError("Failed to open file")
                     }
-                }
-                self.webView.evaluateJavaScript("""
-editor.session.on("change", () => {
-    console.log("Text changed");
-    window.webkit.messageHandlers.editorMessageHandler.postMessage({
-        event: "text_change",
-        data: [editor.getValue()]
-    });
-});
-"""
-                ) { (result, error) in
-                    if error != nil {
-                        #if targetEnvironment(simulator)
-                        print("Failed to register change event")
-                        debugPrint(error!)
-                        #endif
-                    }
-                }
+                    print("File opened")
+                    print("Current content: \(self.document!.code)")
+                    self.initializeEditor()
+                })
             case "text_change":
                 let fileContents: String = data[0] as! String
                 self.document!.code = fileContents
