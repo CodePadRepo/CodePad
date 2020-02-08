@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class DocumentViewController: UIViewController {
-    var document: UIDocument?
+    var document: CodePadDocument?
     var webView: WKWebView!
     var theme: String!
 
@@ -52,6 +52,7 @@ class DocumentViewController: UIViewController {
         super.viewDidLoad()
         prepareWebView()
         loadSettings()
+        self.document!.open(completionHandler: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -134,7 +135,7 @@ extension DocumentViewController: WKScriptMessageHandler {
             case "editor_ready":
                 do {
                     self.webView.evaluateJavaScript(
-                        "editor.session.setValue(`\(try String(contentsOf: self.document!.fileURL))`);"
+                        "editor.session.setValue(`\(document!.code ?? "")`);"
                     ) { (result, error) in
                         if error != nil {
                             #if targetEnvironment(simulator)
@@ -143,10 +144,6 @@ extension DocumentViewController: WKScriptMessageHandler {
                             #endif
                         }
                     }
-                } catch {
-                    #if targetEnvironment(simulator)
-                    print("Failed to read file content")
-                    #endif
                 }
                 self.webView.evaluateJavaScript("""
 editor.session.on("change", () => {
@@ -167,16 +164,11 @@ editor.session.on("change", () => {
                 }
             case "text_change":
                 let fileContents: String = data[0] as! String
-                do {
-                    #if targetEnvironment(simulator)
-                    print("Writing to file...")
-                    #endif
-                    try fileContents.write(to: self.document!.fileURL, atomically: true, encoding: String.Encoding.utf8)
-                } catch {
-                    #if targetEnvironment(simulator)
-                    print("Failed to write to file")
-                    #endif
-                }
+                self.document!.code = fileContents
+                #if targetEnvironment(simulator)
+                print("Writing to file...")
+                #endif
+                self.document!.save(to: document!.fileURL, for: .forOverwriting, completionHandler: nil)
             case "request_init":
                 let theme = self.theme!
                 let filename = self.document!.fileURL.lastPathComponent
