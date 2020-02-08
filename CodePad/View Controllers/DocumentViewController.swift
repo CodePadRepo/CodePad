@@ -149,8 +149,10 @@ extension DocumentViewController: WKScriptMessageHandler {
                     guard success else {
                         fatalError("Failed to open file")
                     }
+                    #if targetEnvironment(simulator)
                     print("File opened")
                     print("Current content: \(self.document!.code)")
+                    #endif
                     self.initializeEditor()
                 })
             case "text_change":
