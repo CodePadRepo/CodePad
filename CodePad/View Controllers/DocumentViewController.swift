@@ -135,7 +135,7 @@ extension DocumentViewController: WKScriptMessageHandler {
             case "editor_ready":
                 do {
                     self.webView.evaluateJavaScript(
-                        "editor.session.setValue(`\(document!.code ?? "")`);"
+                        "editor.session.setValue(`\(document!.code)`);"
                     ) { (result, error) in
                         if error != nil {
                             #if targetEnvironment(simulator)
