@@ -133,16 +133,14 @@ extension DocumentViewController: WKScriptMessageHandler {
             }
             switch event {
             case "editor_ready":
-                do {
-                    self.webView.evaluateJavaScript(
-                        "editor.session.setValue(`\(document!.code)`);"
-                    ) { (result, error) in
-                        if error != nil {
-                            #if targetEnvironment(simulator)
-                            print("Failed to change innerText")
-                            debugPrint(error!)
-                            #endif
-                        }
+                self.webView.evaluateJavaScript(
+                    "editor.session.setValue(`\(document!.code)`);"
+                ) { (result, error) in
+                    if error != nil {
+                        #if targetEnvironment(simulator)
+                        print("Failed to change innerText")
+                        debugPrint(error!)
+                        #endif
                     }
                 }
                 self.webView.evaluateJavaScript("""
