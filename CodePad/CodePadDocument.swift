@@ -16,6 +16,10 @@ class CodePadDocument: UIDocument {
         }
     }
     
+    override required init(fileURL url: URL) {
+        super.init(fileURL: url)
+    }
+    
     override func contents(forType typeName: String) throws -> Any {
         // TODO: Add customizable encodings
         return self.code.data(using: .utf8) as Any
