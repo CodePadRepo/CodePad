@@ -11,6 +11,7 @@ import UIKit
 
 class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate {
     static let newDocNumberKey = "newDocNumber"
+    var DocumentClass = CodePadDocument.self // Remove coupling for unit testing
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +50,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
             documentName = alert.textFields?.first?.text ?? defaultDocumentName
             let newDocumentURL = self.createDocumentURL(documentName!)
-            let newDocument = CodePadDocument(fileURL: newDocumentURL)
+            let newDocument = self.DocumentClass.init(fileURL: newDocumentURL)
             
             newDocument.save(to: newDocumentURL, for: .forCreating) { success in
                 guard success else {
@@ -85,7 +86,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     func presentDocument(at documentURL: URL) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let documentViewController = storyBoard.instantiateViewController(withIdentifier: "DocumentViewController") as! DocumentViewController
-        documentViewController.document = CodePadDocument(fileURL: documentURL)
+        documentViewController.document = self.DocumentClass.init(fileURL: documentURL)
         documentViewController.modalPresentationStyle = .fullScreen
         
         present(documentViewController, animated: true, completion: nil)
