@@ -21,6 +21,22 @@
 		665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 665C0F9F23DAC05600E29BA4 /* TextEditor.html */; };
 		665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 665C0FA323DAC56100E29BA4 /* TextEditor.css */; };
 		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
+		665C236D23F1A47D00C8E4B5 /* MesloLGM-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C235D23F1A47C00C8E4B5 /* MesloLGM-BoldItalic.ttf */; };
+		665C236E23F1A47D00C8E4B5 /* FiraCode-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C235E23F1A47C00C8E4B5 /* FiraCode-Regular.ttf */; };
+		665C236F23F1A47D00C8E4B5 /* Inconsolata-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C235F23F1A47C00C8E4B5 /* Inconsolata-Bold.ttf */; };
+		665C237023F1A47D00C8E4B5 /* FantasqueSansMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236023F1A47C00C8E4B5 /* FantasqueSansMono-Bold.ttf */; };
+		665C237123F1A47E00C8E4B5 /* MesloLGM-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236123F1A47C00C8E4B5 /* MesloLGM-Regular.ttf */; };
+		665C237223F1A47E00C8E4B5 /* Hack-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236223F1A47D00C8E4B5 /* Hack-Italic.ttf */; };
+		665C237323F1A47E00C8E4B5 /* FantasqueSansMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236323F1A47D00C8E4B5 /* FantasqueSansMono-Italic.ttf */; };
+		665C237423F1A47E00C8E4B5 /* FantasqueSansMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236423F1A47D00C8E4B5 /* FantasqueSansMono-Regular.ttf */; };
+		665C237523F1A47E00C8E4B5 /* FantasqueSansMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236523F1A47D00C8E4B5 /* FantasqueSansMono-BoldItalic.ttf */; };
+		665C237623F1A47E00C8E4B5 /* MesloLGM-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236623F1A47D00C8E4B5 /* MesloLGM-Italic.ttf */; };
+		665C237723F1A47E00C8E4B5 /* MesloLGM-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236723F1A47D00C8E4B5 /* MesloLGM-Bold.ttf */; };
+		665C237823F1A47E00C8E4B5 /* Hack-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236823F1A47D00C8E4B5 /* Hack-Bold.ttf */; };
+		665C237923F1A47E00C8E4B5 /* Hack-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236923F1A47D00C8E4B5 /* Hack-BoldItalic.ttf */; };
+		665C237A23F1A47E00C8E4B5 /* FiraCode-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236A23F1A47D00C8E4B5 /* FiraCode-Bold.ttf */; };
+		665C237B23F1A47E00C8E4B5 /* Inconsolata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236B23F1A47D00C8E4B5 /* Inconsolata-Regular.ttf */; };
+		665C237C23F1A47E00C8E4B5 /* Hack-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236C23F1A47D00C8E4B5 /* Hack-Regular.ttf */; };
 		6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 6683ADAF23DBDEE7004ADADD /* TextEditor.js */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
 		66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE439F23EB00A800CBE703 /* URLHelper.swift */; };
@@ -65,6 +81,22 @@
 		665C0F9F23DAC05600E29BA4 /* TextEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TextEditor.html; sourceTree = "<group>"; };
 		665C0FA323DAC56100E29BA4 /* TextEditor.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = TextEditor.css; sourceTree = "<group>"; };
 		665C0FA623DAD13B00E29BA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		665C235D23F1A47C00C8E4B5 /* MesloLGM-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MesloLGM-BoldItalic.ttf"; sourceTree = "<group>"; };
+		665C235E23F1A47C00C8E4B5 /* FiraCode-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraCode-Regular.ttf"; sourceTree = "<group>"; };
+		665C235F23F1A47C00C8E4B5 /* Inconsolata-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inconsolata-Bold.ttf"; sourceTree = "<group>"; };
+		665C236023F1A47C00C8E4B5 /* FantasqueSansMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FantasqueSansMono-Bold.ttf"; sourceTree = "<group>"; };
+		665C236123F1A47C00C8E4B5 /* MesloLGM-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MesloLGM-Regular.ttf"; sourceTree = "<group>"; };
+		665C236223F1A47D00C8E4B5 /* Hack-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Italic.ttf"; sourceTree = "<group>"; };
+		665C236323F1A47D00C8E4B5 /* FantasqueSansMono-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FantasqueSansMono-Italic.ttf"; sourceTree = "<group>"; };
+		665C236423F1A47D00C8E4B5 /* FantasqueSansMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FantasqueSansMono-Regular.ttf"; sourceTree = "<group>"; };
+		665C236523F1A47D00C8E4B5 /* FantasqueSansMono-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FantasqueSansMono-BoldItalic.ttf"; sourceTree = "<group>"; };
+		665C236623F1A47D00C8E4B5 /* MesloLGM-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MesloLGM-Italic.ttf"; sourceTree = "<group>"; };
+		665C236723F1A47D00C8E4B5 /* MesloLGM-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MesloLGM-Bold.ttf"; sourceTree = "<group>"; };
+		665C236823F1A47D00C8E4B5 /* Hack-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Bold.ttf"; sourceTree = "<group>"; };
+		665C236923F1A47D00C8E4B5 /* Hack-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-BoldItalic.ttf"; sourceTree = "<group>"; };
+		665C236A23F1A47D00C8E4B5 /* FiraCode-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraCode-Bold.ttf"; sourceTree = "<group>"; };
+		665C236B23F1A47D00C8E4B5 /* Inconsolata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inconsolata-Regular.ttf"; sourceTree = "<group>"; };
+		665C236C23F1A47D00C8E4B5 /* Hack-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Regular.ttf"; sourceTree = "<group>"; };
 		6683ADAF23DBDEE7004ADADD /* TextEditor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TextEditor.js; sourceTree = "<group>"; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
 		66FE439F23EB00A800CBE703 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
@@ -122,6 +154,7 @@
 		66307FC623C4D21100AE7027 /* CodePad */ = {
 			isa = PBXGroup;
 			children = (
+				665C235B23F1A3EC00C8E4B5 /* Resources */,
 				66B3519923EE6FEC008DD45D /* Infrastructure */,
 				665C0FA223DAC3B800E29BA4 /* Web Resources */,
 				668BA9AC23EC540800C872A9 /* View Controllers */,
@@ -170,6 +203,37 @@
 				665C0FA623DAD13B00E29BA4 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		665C235B23F1A3EC00C8E4B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				665C235C23F1A3FC00C8E4B5 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		665C235C23F1A3FC00C8E4B5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				665C236023F1A47C00C8E4B5 /* FantasqueSansMono-Bold.ttf */,
+				665C236523F1A47D00C8E4B5 /* FantasqueSansMono-BoldItalic.ttf */,
+				665C236323F1A47D00C8E4B5 /* FantasqueSansMono-Italic.ttf */,
+				665C236423F1A47D00C8E4B5 /* FantasqueSansMono-Regular.ttf */,
+				665C236A23F1A47D00C8E4B5 /* FiraCode-Bold.ttf */,
+				665C235E23F1A47C00C8E4B5 /* FiraCode-Regular.ttf */,
+				665C236823F1A47D00C8E4B5 /* Hack-Bold.ttf */,
+				665C236923F1A47D00C8E4B5 /* Hack-BoldItalic.ttf */,
+				665C236223F1A47D00C8E4B5 /* Hack-Italic.ttf */,
+				665C236C23F1A47D00C8E4B5 /* Hack-Regular.ttf */,
+				665C235F23F1A47C00C8E4B5 /* Inconsolata-Bold.ttf */,
+				665C236B23F1A47D00C8E4B5 /* Inconsolata-Regular.ttf */,
+				665C236723F1A47D00C8E4B5 /* MesloLGM-Bold.ttf */,
+				665C235D23F1A47C00C8E4B5 /* MesloLGM-BoldItalic.ttf */,
+				665C236623F1A47D00C8E4B5 /* MesloLGM-Italic.ttf */,
+				665C236123F1A47C00C8E4B5 /* MesloLGM-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		668BA9AB23EC53ED00C872A9 /* Helpers */ = {
@@ -308,13 +372,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665C237623F1A47E00C8E4B5 /* MesloLGM-Italic.ttf in Resources */,
 				664C718A23E6B1C0005FEBC0 /* Settings.bundle in Resources */,
+				665C237C23F1A47E00C8E4B5 /* Hack-Regular.ttf in Resources */,
+				665C237823F1A47E00C8E4B5 /* Hack-Bold.ttf in Resources */,
 				66307FD623C4D21300AE7027 /* LaunchScreen.storyboard in Resources */,
+				665C237023F1A47D00C8E4B5 /* FantasqueSansMono-Bold.ttf in Resources */,
+				665C237523F1A47E00C8E4B5 /* FantasqueSansMono-BoldItalic.ttf in Resources */,
+				665C237A23F1A47E00C8E4B5 /* FiraCode-Bold.ttf in Resources */,
+				665C236E23F1A47D00C8E4B5 /* FiraCode-Regular.ttf in Resources */,
 				66307FD323C4D21300AE7027 /* Assets.xcassets in Resources */,
+				665C236D23F1A47D00C8E4B5 /* MesloLGM-BoldItalic.ttf in Resources */,
 				665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */,
+				665C237923F1A47E00C8E4B5 /* Hack-BoldItalic.ttf in Resources */,
 				66307FD123C4D21100AE7027 /* Main.storyboard in Resources */,
 				6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */,
+				665C237223F1A47E00C8E4B5 /* Hack-Italic.ttf in Resources */,
+				665C236F23F1A47D00C8E4B5 /* Inconsolata-Bold.ttf in Resources */,
 				66C976EB23DDCB990084E2EE /* ace_src in Resources */,
+				665C237123F1A47E00C8E4B5 /* MesloLGM-Regular.ttf in Resources */,
+				665C237B23F1A47E00C8E4B5 /* Inconsolata-Regular.ttf in Resources */,
+				665C237723F1A47E00C8E4B5 /* MesloLGM-Bold.ttf in Resources */,
+				665C237323F1A47E00C8E4B5 /* FantasqueSansMono-Italic.ttf in Resources */,
+				665C237423F1A47E00C8E4B5 /* FantasqueSansMono-Regular.ttf in Resources */,
 				665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
