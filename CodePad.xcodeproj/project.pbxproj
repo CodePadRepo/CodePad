@@ -154,11 +154,11 @@
 		66307FC623C4D21100AE7027 /* CodePad */ = {
 			isa = PBXGroup;
 			children = (
+				66F50EFB23F2F4E200A02EDE /* Models */,
 				665C235B23F1A3EC00C8E4B5 /* Resources */,
 				66B3519923EE6FEC008DD45D /* Infrastructure */,
 				665C0FA223DAC3B800E29BA4 /* Web Resources */,
 				668BA9AC23EC540800C872A9 /* View Controllers */,
-				66307FCD23C4D21100AE7027 /* CodePadDocument.swift */,
 				668BA9AB23EC53ED00C872A9 /* Helpers */,
 				66307FCF23C4D21100AE7027 /* Main.storyboard */,
 				66307FD223C4D21300AE7027 /* Assets.xcassets */,
@@ -260,6 +260,14 @@
 				66307FC723C4D21100AE7027 /* AppDelegate.swift */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		66F50EFB23F2F4E200A02EDE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66307FCD23C4D21100AE7027 /* CodePadDocument.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
