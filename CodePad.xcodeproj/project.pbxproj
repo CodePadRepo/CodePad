@@ -14,8 +14,8 @@
 		66307FD123C4D21100AE7027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66307FCF23C4D21100AE7027 /* Main.storyboard */; };
 		66307FD323C4D21300AE7027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66307FD223C4D21300AE7027 /* Assets.xcassets */; };
 		66307FD623C4D21300AE7027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */; };
-		66307FE123C4D21300AE7027 /* CodePadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FE023C4D21300AE7027 /* CodePadTests.swift */; };
 		66307FEC23C4D21400AE7027 /* CodePadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FEB23C4D21400AE7027 /* CodePadUITests.swift */; };
+		66307FE123C4D21300AE7027 /* CodePadDocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FE023C4D21300AE7027 /* CodePadDocumentTests.swift */; };
 		664C718A23E6B1C0005FEBC0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 664C718923E6B1C0005FEBC0 /* Settings.bundle */; };
 		664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */; };
 		665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 665C0F9F23DAC05600E29BA4 /* TextEditor.html */; };
@@ -39,6 +39,7 @@
 		665C237C23F1A47E00C8E4B5 /* Hack-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236C23F1A47D00C8E4B5 /* Hack-Regular.ttf */; };
 		6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 6683ADAF23DBDEE7004ADADD /* TextEditor.js */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
+		66F50EFC23F2F53600A02EDE /* MockCodePadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */; };
 		66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE439F23EB00A800CBE703 /* URLHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,12 +71,13 @@
 		66307FD523C4D21300AE7027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66307FD723C4D21300AE7027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66307FDC23C4D21300AE7027 /* CodePadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodePadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		66307FE023C4D21300AE7027 /* CodePadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadTests.swift; sourceTree = "<group>"; };
+		66307FE023C4D21300AE7027 /* CodePadDocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadDocumentTests.swift; sourceTree = "<group>"; };
 		66307FE223C4D21300AE7027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66307FE723C4D21400AE7027 /* CodePadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodePadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66307FEB23C4D21400AE7027 /* CodePadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadUITests.swift; sourceTree = "<group>"; };
 		66307FED23C4D21400AE7027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66307FF923C4D27D00AE7027 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCodePadDocument.swift; sourceTree = "<group>"; };
 		664C718923E6B1C0005FEBC0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstsHelper.swift; sourceTree = "<group>"; };
 		665C0F9F23DAC05600E29BA4 /* TextEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TextEditor.html; sourceTree = "<group>"; };
@@ -171,7 +173,8 @@
 		66307FDF23C4D21300AE7027 /* CodePadTests */ = {
 			isa = PBXGroup;
 			children = (
-				66307FE023C4D21300AE7027 /* CodePadTests.swift */,
+				6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */,
+				66307FE023C4D21300AE7027 /* CodePadDocumentTests.swift */,
 				66307FE223C4D21300AE7027 /* Info.plist */,
 			);
 			path = CodePadTests;
@@ -462,7 +465,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66307FE123C4D21300AE7027 /* CodePadTests.swift in Sources */,
+				66307FE123C4D21300AE7027 /* CodePadDocumentTests.swift in Sources */,
+				66F50EFC23F2F53600A02EDE /* MockCodePadDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
