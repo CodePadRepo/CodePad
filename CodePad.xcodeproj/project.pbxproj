@@ -157,14 +157,13 @@
 			isa = PBXGroup;
 			children = (
 				66F50EFB23F2F4E200A02EDE /* Models */,
-				665C235B23F1A3EC00C8E4B5 /* Resources */,
 				66B3519923EE6FEC008DD45D /* Infrastructure */,
-				665C0FA223DAC3B800E29BA4 /* Web Resources */,
 				668BA9AC23EC540800C872A9 /* View Controllers */,
 				668BA9AB23EC53ED00C872A9 /* Helpers */,
+				665C235B23F1A3EC00C8E4B5 /* Resources */,
 				66307FCF23C4D21100AE7027 /* Main.storyboard */,
-				66307FD223C4D21300AE7027 /* Assets.xcassets */,
 				66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */,
+				66307FD223C4D21300AE7027 /* Assets.xcassets */,
 				66307FD723C4D21300AE7027 /* Info.plist */,
 			);
 			path = CodePad;
@@ -189,7 +188,7 @@
 			path = CodePadUITests;
 			sourceTree = "<group>";
 		};
-		665C0FA223DAC3B800E29BA4 /* Web Resources */ = {
+		665C0FA223DAC3B800E29BA4 /* Web */ = {
 			isa = PBXGroup;
 			children = (
 				66C976EA23DDCB990084E2EE /* ace_src */,
@@ -197,7 +196,7 @@
 				665C0FA323DAC56100E29BA4 /* TextEditor.css */,
 				6683ADAF23DBDEE7004ADADD /* TextEditor.js */,
 			);
-			path = "Web Resources";
+			path = Web;
 			sourceTree = "<group>";
 		};
 		665C0FA523DAD13B00E29BA4 /* Frameworks */ = {
@@ -211,6 +210,7 @@
 		665C235B23F1A3EC00C8E4B5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				665C0FA223DAC3B800E29BA4 /* Web */,
 				665C235C23F1A3FC00C8E4B5 /* Fonts */,
 			);
 			path = Resources;
@@ -630,7 +630,7 @@
 		66307FF123C4D21400AE7027 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VV99A3MM59;
@@ -651,7 +651,7 @@
 		66307FF223C4D21400AE7027 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VV99A3MM59;
