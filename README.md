@@ -22,7 +22,7 @@ CodePad is a simple code editor for iOS. It is currently work-in-progress.
 - [ ] Proper logging
 - [ ] Unit tests
 - [ ] UI automation tests
-- [ ] CI using TravisCI/GitHub Actions
+- [x] CI using TravisCI/GitHub Actions
 
 ### `P1`: Important Features, should be implemented by `v0.2.0`
 - [ ] Share menu
