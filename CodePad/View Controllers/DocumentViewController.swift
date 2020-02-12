@@ -24,7 +24,7 @@ class DocumentViewController: UIViewController {
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor).isActive = true
         webView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
-        webView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
+        webView.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 44).isActive = true
         webView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
         let url = Bundle.main.url(forResource: "TextEditor", withExtension: "html")!
         webView.loadFileURL(url, allowingReadAccessTo: url)
