@@ -88,8 +88,10 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         let documentViewController = storyBoard.instantiateViewController(withIdentifier: "DocumentViewController") as! DocumentViewController
         documentViewController.document = self.DocumentClass.init(fileURL: documentURL)
         documentViewController.modalPresentationStyle = .fullScreen
+        let navBarController = UINavigationController(rootViewController: documentViewController)
+        navBarController.modalPresentationStyle = .fullScreen
         
-        present(documentViewController, animated: true, completion: nil)
+        present(navBarController, animated: true, completion: nil)
     }
 }
 
