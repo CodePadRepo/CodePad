@@ -24,6 +24,8 @@ class CodePadUITests: XCTestCase {
     func testNewDocumentButtonShowAlert() {
         sleep(2)
         app.buttons["Add"].tap()
+        
+        sleep(2)
         XCTAssert(app.alerts.element.staticTexts["Create File"].exists)
     }
 
