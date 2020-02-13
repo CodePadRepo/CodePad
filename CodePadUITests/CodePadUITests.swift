@@ -14,7 +14,6 @@ class CodePadUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
-        app.launch()
     }
 
     override func tearDown() {
@@ -22,6 +21,8 @@ class CodePadUITests: XCTestCase {
     }
 
     func testNewDocumentButtonShowAlert() {
+        app.launch()
+        
         sleep(2)
         app.buttons["Add"].tap()
         
