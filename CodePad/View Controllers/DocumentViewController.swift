@@ -48,10 +48,15 @@ class DocumentViewController: UIViewController {
         }
     }
     
+    fileprivate func setNavbar() {
+        self.title = document?.fileURL.lastPathComponent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareWebView()
         loadSettings()
+        setNavbar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
