@@ -9,18 +9,22 @@
 import XCTest
 
 class CodePadUITests: XCTestCase {
+    var app: XCUIApplication!
 
     override func setUp() {
         continueAfterFailure = false
-        XCUIApplication().launch()
+        app = XCUIApplication()
+        app.launch()
     }
 
     override func tearDown() {
         super.tearDown()
     }
 
-    func testNavbar() {
-        
+    func testNewDocumentButtonShowAlert() {
+        sleep(2)
+        app.buttons["Add"].tap()
+        XCTAssert(app.alerts.element.staticTexts["Create File"].exists)
     }
 
 }
