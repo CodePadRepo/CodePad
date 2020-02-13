@@ -37,6 +37,7 @@
 		665C237A23F1A47E00C8E4B5 /* FiraCode-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236A23F1A47D00C8E4B5 /* FiraCode-Bold.ttf */; };
 		665C237B23F1A47E00C8E4B5 /* Inconsolata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236B23F1A47D00C8E4B5 /* Inconsolata-Regular.ttf */; };
 		665C237C23F1A47E00C8E4B5 /* Hack-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 665C236C23F1A47D00C8E4B5 /* Hack-Regular.ttf */; };
+		6675D0F323F59B54002E8880 /* TextinputHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675D0F223F59B54002E8880 /* TextinputHelper.swift */; };
 		6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 6683ADAF23DBDEE7004ADADD /* TextEditor.js */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
 		66F50EFC23F2F53600A02EDE /* MockCodePadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */; };
@@ -99,6 +100,7 @@
 		665C236A23F1A47D00C8E4B5 /* FiraCode-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraCode-Bold.ttf"; sourceTree = "<group>"; };
 		665C236B23F1A47D00C8E4B5 /* Inconsolata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inconsolata-Regular.ttf"; sourceTree = "<group>"; };
 		665C236C23F1A47D00C8E4B5 /* Hack-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Regular.ttf"; sourceTree = "<group>"; };
+		6675D0F223F59B54002E8880 /* TextinputHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextinputHelper.swift; sourceTree = "<group>"; };
 		6683ADAF23DBDEE7004ADADD /* TextEditor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TextEditor.js; sourceTree = "<group>"; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
 		66FE439F23EB00A800CBE703 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				6647EC6523F19FE0004053D3 /* CodePadUITests.swift */,
 				66307FED23C4D21400AE7027 /* Info.plist */,
+				6675D0F223F59B54002E8880 /* TextinputHelper.swift */,
 			);
 			path = CodePadUITests;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6647EC6623F19FE0004053D3 /* CodePadUITests.swift in Sources */,
+				6675D0F323F59B54002E8880 /* TextinputHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

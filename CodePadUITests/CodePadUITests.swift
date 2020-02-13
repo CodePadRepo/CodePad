@@ -28,6 +28,13 @@ class CodePadUITests: XCTestCase {
         
         sleep(2)
         XCTAssert(app.alerts.element.staticTexts["Create File"].exists)
+        
+        sleep(2)
+        let filenameTextfield = app.alerts.element.textFields.firstMatch
+        XCTAssertNotNil(filenameTextfield)
+        XCTAssertEqual(filenameTextfield.placeholderValue, "File name")
+        filenameTextfield.clearAndTypeText("test.py")
+        app.alerts.element.buttons["OK"].tap()
     }
 
 }
