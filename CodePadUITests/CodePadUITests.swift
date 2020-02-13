@@ -20,7 +20,7 @@ class CodePadUITests: XCTestCase {
         super.tearDown()
     }
 
-    func testNewDocumentButtonShowAlert() {
+    func testDocumentCreation() {
         app.launch()
         
         sleep(2)
