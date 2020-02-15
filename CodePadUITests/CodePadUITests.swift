@@ -14,6 +14,10 @@ class CodePadUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
+        app.launchArguments = [
+            "-NSTreatUnknownArgumentsAsOpen", "NO",
+            "-ApplePersistenceIgnoreState", "YES"
+        ]
     }
 
     override func tearDown() {
