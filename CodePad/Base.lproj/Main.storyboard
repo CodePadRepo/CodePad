@@ -33,7 +33,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BoZ-jc-2Y8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Code" id="ZCH-qy-ovm"/>
+                    <navigationItem key="navigationItem" title="Code" largeTitleDisplayMode="never" id="ZCH-qy-ovm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rl9-ES-qQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
