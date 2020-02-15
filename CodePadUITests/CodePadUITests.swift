@@ -42,6 +42,7 @@ class CodePadUITests: XCTestCase {
         let newFileInBrowser = app.cells.containing(predicate).firstMatch
         XCTAssert(newFileInBrowser.exists)
         newFileInBrowser.press(forDuration: 2)
+        app.buttons["Delete"].tap()
     }
 
 }
