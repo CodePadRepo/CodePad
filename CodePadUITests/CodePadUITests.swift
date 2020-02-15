@@ -40,13 +40,6 @@ class CodePadUITests: XCTestCase {
         XCTAssertEqual(filenameTextfield.placeholderValue, "File name")
         filenameTextfield.clearAndTypeText(newFileName)
         app.alerts.element.buttons["OK"].tap()
-        
-        sleep(2)
-        let predicate = NSPredicate(format: "label CONTAINS '\(newFileName)'")
-        let newFileInBrowser = app.cells.containing(predicate).firstMatch
-        XCTAssert(newFileInBrowser.exists)
-        newFileInBrowser.press(forDuration: 2)
-        app.buttons["Delete"].tap()
     }
 
 }
