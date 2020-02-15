@@ -32,6 +32,10 @@ class CodePadUITests: XCTestCase {
         
         sleep(2)
         XCTAssert(app.alerts.element.staticTexts["Create File"].exists)
+        app.alerts.element.buttons["Cancel"].tap()
+        
+        sleep(2)
+        app.buttons["Add"].tap()
         
         sleep(2)
         let newFileName = "test.py"
