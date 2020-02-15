@@ -20,6 +20,9 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         
         allowsDocumentCreation = true
         allowsPickingMultipleItems = false
+        if #available(iOS 13.0, *) {
+            shouldShowFileExtensions = true
+        }
     }
     
     fileprivate func generateDocumentName() -> String {
