@@ -69,7 +69,9 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
                 }
             }
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (_) in
+            importHandler(nil, .none)
+        }))
         present(alert, animated: true, completion: nil)
     }
     
