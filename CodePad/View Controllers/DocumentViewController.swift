@@ -106,7 +106,7 @@ class DocumentViewController: UIViewController {
     fileprivate func initializeEditor() {
         let theme = self.theme!
         let filename = self.document!.fileURL.lastPathComponent
-        self.webView.evaluateJavaScript("initializeEditor('\(theme)', '\(filename)', `\(document!.code)`)") { (result, error) in
+        self.webView.evaluateJavaScript("initializeEditor('\(theme)', '\(filename)', `\(document!.code.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "`", with: "\\`"))`)") { (result, error) in
             if error != nil {
                 #if targetEnvironment(simulator)
                 print("Failed to initialize editor")
