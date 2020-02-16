@@ -12,6 +12,7 @@ import UIKit
 class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate {
     static let newDocNumberKey = "newDocNumber"
     var DocumentClass = CodePadDocument.self // Remove coupling for unit testing
+    var documentURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,15 +89,15 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     func documentBrowser(_ controller: UIDocumentBrowserViewController, failedToImportDocumentAt documentURL: URL, error: Error?) {
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationView = segue.destination as? UINavigationController else { return }
+        guard let documentView = navigationView.viewControllers.first as? DocumentViewController else { return }
+        documentView.document = self.DocumentClass.init(fileURL: self.documentURL!)
+    }
+    
     func presentDocument(at documentURL: URL) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let documentViewController = storyBoard.instantiateViewController(withIdentifier: "DocumentViewController") as! DocumentViewController
-        documentViewController.document = self.DocumentClass.init(fileURL: documentURL)
-        documentViewController.modalPresentationStyle = .fullScreen
-        let navBarController = UINavigationController(rootViewController: documentViewController)
-        navBarController.modalPresentationStyle = .fullScreen
-        
-        present(navBarController, animated: true, completion: nil)
+        self.documentURL = documentURL
+        performSegue(withIdentifier: "OpenFile", sender: nil)
     }
 }
 
