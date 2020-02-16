@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -368,7 +368,6 @@
 			);
 			mainGroup = 66307FBB23C4D21100AE7027;
 			packageReferences = (
-				664C718623E6A21E005FEBC0 /* XCRemoteSwiftPackageReference "swift-log" */,
 			);
 			productRefGroup = 66307FC523C4D21100AE7027 /* Products */;
 			projectDirPath = "";
@@ -797,17 +796,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		664C718623E6A21E005FEBC0 /* XCRemoteSwiftPackageReference "swift-log" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-log";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 66307FBC23C4D21100AE7027 /* Project object */;
 }
