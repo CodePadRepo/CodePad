@@ -28,6 +28,9 @@ class CodePadUITests: XCTestCase {
         app.launch()
         
         sleep(2)
+        app.tabBars.firstMatch.buttons["Browse"].tap()
+        
+        sleep(2)
         app.buttons["Add"].tap()
         
         sleep(2)
