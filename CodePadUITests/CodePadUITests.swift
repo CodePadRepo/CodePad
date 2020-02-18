@@ -28,9 +28,6 @@ class CodePadUITests: XCTestCase {
         app.launch()
         
         sleep(2)
-        app.tabBars.firstMatch.buttons["Browse"].tap()
-        
-        sleep(2)
         app.buttons["Add"].tap()
         
         sleep(2)
@@ -49,12 +46,12 @@ class CodePadUITests: XCTestCase {
         app.alerts.element.buttons["OK"].tap()
         
         sleep(2)
-        if app.navigationBars.firstMatch.staticTexts[newFileName].exists {
+        let predicate = NSPredicate(format: "label CONTAINS '\(newFileName)'")
+        if app.navigationBars.staticTexts.containing(predicate).firstMatch.exists {
             app.navigationBars.buttons.firstMatch.tap()
         }
         
         sleep(2)
-        let predicate = NSPredicate(format: "label CONTAINS '\(newFileName)'")
         let newFileInBrowser = app.cells.containing(predicate).firstMatch
         XCTAssert(newFileInBrowser.exists)
         newFileInBrowser.press(forDuration: 2)
