@@ -26,6 +26,16 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     fileprivate func generateDocumentName() -> String {
         let newDocNumber = UserDefaults.standard.integer(forKey: DocumentBrowserViewController.newDocNumberKey)
         return "Untitled Code \(newDocNumber)"
@@ -90,9 +100,9 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationView = segue.destination as? UINavigationController else { return }
-        guard let documentView = navigationView.viewControllers.first as? DocumentViewController else { return }
+        guard let documentView = segue.destination as? DocumentViewController else { return }
         documentView.document = self.DocumentClass.init(fileURL: self.documentURL!)
+        self.navigationItem.title = ""
     }
     
     func presentDocument(at documentURL: URL) {
