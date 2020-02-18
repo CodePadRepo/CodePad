@@ -38,12 +38,32 @@
                         <viewLayoutGuide key="safeArea" id="BoZ-jc-2Y8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Code" id="yHv-nZ-boh">
-                        <barButtonItem key="rightBarButtonItem" title="Configure" image="gear" catalog="system" id="fBW-oD-D9u"/>
+                        <barButtonItem key="rightBarButtonItem" title="Configure" image="gear" catalog="system" id="fBW-oD-D9u">
+                            <connections>
+                                <segue destination="wci-pZ-0uO" kind="show" identifier="Configure" id="2TK-RG-C39"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rl9-ES-qQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1960.8695652173915" y="653.57142857142856"/>
+        </scene>
+        <!--Configurations-->
+        <scene sceneID="Rdl-Hk-5aD">
+            <objects>
+                <viewController id="wci-pZ-0uO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lj4-or-OTo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Wo6-HV-dzb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Configurations" id="4HU-bb-FGe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvP-Gv-Qa3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2880" y="654"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nDl-ay-e1v">
