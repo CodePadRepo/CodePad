@@ -132,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		661B18B823FD7B4F003486C5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				66307FCF23C4D21100AE7027 /* Main.storyboard */,
+				66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		66307FBB23C4D21100AE7027 = {
 			isa = PBXGroup;
 			children = (
@@ -163,8 +172,7 @@
 				668BA9AC23EC540800C872A9 /* View Controllers */,
 				668BA9AB23EC53ED00C872A9 /* Helpers */,
 				665C235B23F1A3EC00C8E4B5 /* Resources */,
-				66307FCF23C4D21100AE7027 /* Main.storyboard */,
-				66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */,
+				661B18B823FD7B4F003486C5 /* Storyboards */,
 				66307FD223C4D21300AE7027 /* Assets.xcassets */,
 				66307FD723C4D21300AE7027 /* Info.plist */,
 			);
