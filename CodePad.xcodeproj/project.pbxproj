@@ -39,6 +39,8 @@
 		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
 		6675D0F323F59B54002E8880 /* TextinputHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675D0F223F59B54002E8880 /* TextinputHelper.swift */; };
 		6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 6683ADAF23DBDEE7004ADADD /* TextEditor.js */; };
+		66A20C9A23FED1AD00BCDA01 /* CommandLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A20C9823FED1AD00BCDA01 /* CommandLine@2x.png */; };
+		66A20C9B23FED1AD00BCDA01 /* CommandLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A20C9923FED1AD00BCDA01 /* CommandLine@3x.png */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
 		66F50EFC23F2F53600A02EDE /* MockCodePadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */; };
 		66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE439F23EB00A800CBE703 /* URLHelper.swift */; };
@@ -102,6 +104,8 @@
 		665C236C23F1A47D00C8E4B5 /* Hack-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Regular.ttf"; sourceTree = "<group>"; };
 		6675D0F223F59B54002E8880 /* TextinputHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextinputHelper.swift; sourceTree = "<group>"; };
 		6683ADAF23DBDEE7004ADADD /* TextEditor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TextEditor.js; sourceTree = "<group>"; };
+		66A20C9823FED1AD00BCDA01 /* CommandLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CommandLine@2x.png"; path = "Designs/CommandLine@2x.png"; sourceTree = SOURCE_ROOT; };
+		66A20C9923FED1AD00BCDA01 /* CommandLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CommandLine@3x.png"; path = "Designs/CommandLine@3x.png"; sourceTree = SOURCE_ROOT; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
 		66FE439F23EB00A800CBE703 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +225,7 @@
 		665C235B23F1A3EC00C8E4B5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				66A20C9323FED17800BCDA01 /* Icons */,
 				665C0FA223DAC3B800E29BA4 /* Web */,
 				665C235C23F1A3FC00C8E4B5 /* Fonts */,
 			);
@@ -266,6 +271,15 @@
 				66307FCB23C4D21100AE7027 /* DocumentViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		66A20C9323FED17800BCDA01 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				66A20C9823FED1AD00BCDA01 /* CommandLine@2x.png */,
+				66A20C9923FED1AD00BCDA01 /* CommandLine@3x.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		66B3519923EE6FEC008DD45D /* Infrastructure */ = {
@@ -408,6 +422,7 @@
 				661B18AC23FC0E1F003486C5 /* FiraCode-Bold.ttf in Resources */,
 				661B18B423FC0E1F003486C5 /* MesloLGM-Bold.ttf in Resources */,
 				6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */,
+				66A20C9B23FED1AD00BCDA01 /* CommandLine@3x.png in Resources */,
 				661B18B723FC0E1F003486C5 /* MesloLGM-Regular.ttf in Resources */,
 				661B18AF23FC0E1F003486C5 /* Hack-BoldItalic.ttf in Resources */,
 				661B18AA23FC0E1F003486C5 /* FantasqueSansMono-Italic.ttf in Resources */,
@@ -415,6 +430,7 @@
 				66C976EB23DDCB990084E2EE /* ace_src in Resources */,
 				661B18A923FC0E1F003486C5 /* FantasqueSansMono-BoldItalic.ttf in Resources */,
 				661B18AB23FC0E1F003486C5 /* FantasqueSansMono-Regular.ttf in Resources */,
+				66A20C9A23FED1AD00BCDA01 /* CommandLine@2x.png in Resources */,
 				661B18B223FC0E1F003486C5 /* Inconsolata-Bold.ttf in Resources */,
 				665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */,
 			);

@@ -50,6 +50,7 @@ class DocumentViewController: UIViewController {
     
     fileprivate func setNavbar() {
         self.title = document?.fileURL.lastPathComponent
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Command Icon"), style: .plain, target: self, action: nil)
     }
     
     override func viewDidLoad() {
