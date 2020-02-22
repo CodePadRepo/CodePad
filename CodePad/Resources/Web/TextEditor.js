@@ -9,6 +9,18 @@ initializeEditor = (theme, filename, editorContent) => {
     editor.getSession().setUndoManager(new ace.UndoManager())
     editor.clearSelection();
     
+    editor.commands.removeCommand(editor.commands.byName.showSettingsMenu)
+    editor.commands.addCommand({
+        name: "configureCodePad",
+        description: "Configure CodePad",
+        exec: (editor) => {
+            window.webkit.messageHandlers.editorMessageHandler.postMessage({
+                event: "configure",
+                data: []
+            });
+        }
+    });
+    
     editor.session.on("change", () => {
         console.log("Text changed");
         window.webkit.messageHandlers.editorMessageHandler.postMessage({
