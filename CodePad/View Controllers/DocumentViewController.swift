@@ -180,6 +180,8 @@ extension DocumentViewController: WKScriptMessageHandler {
                 print("Writing to file...")
                 #endif
                 self.document!.save(to: document!.fileURL, for: .forOverwriting, completionHandler: nil)
+            case "configure":
+                performSegue(withIdentifier: "Configure", sender: nil)
             default:
                 #if targetEnvironment(simulator)
                 print("Unknown event: \(event)")
