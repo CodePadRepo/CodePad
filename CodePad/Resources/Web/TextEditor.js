@@ -16,7 +16,7 @@ initializeEditor = (theme, filename, editorContent) => {
         exec: (editor) => {
             window.webkit.messageHandlers.editorMessageHandler.postMessage({
                 event: "configure",
-                data: []
+                data: {}
             });
         }
     });
@@ -25,12 +25,12 @@ initializeEditor = (theme, filename, editorContent) => {
         console.log("Text changed");
         window.webkit.messageHandlers.editorMessageHandler.postMessage({
             event: "text_change",
-            data: [editor.getValue()]
+            data: { fileContent: editor.getValue() }
         });
     });
 };
 
 window.webkit.messageHandlers.editorMessageHandler.postMessage({
     event: "editor_ready",
-    data: []
+    data: {}
 });

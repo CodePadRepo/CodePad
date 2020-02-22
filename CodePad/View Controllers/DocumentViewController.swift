@@ -158,8 +158,8 @@ extension DocumentViewController: WKScriptMessageHandler {
         if message.name == "editorMessageHandler" {
             guard let dict = message.body as? [String: AnyObject],
                 let event = dict["event"] as? String,
-                let data = dict["data"] as? Array<AnyObject> else {
-                    return
+                let data = dict["data"] as? [String: AnyObject] else {
+                    fatalError("Cannot read message handler data")
             }
             switch event {
             case "editor_ready":
@@ -174,7 +174,7 @@ extension DocumentViewController: WKScriptMessageHandler {
                     self.initializeEditor()
                 })
             case "text_change":
-                let fileContents: String = data[0] as! String
+                let fileContents: String = data["fileContent"] as! String
                 self.document!.code = fileContents
                 #if targetEnvironment(simulator)
                 print("Writing to file...")
