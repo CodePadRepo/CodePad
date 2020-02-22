@@ -39,6 +39,7 @@
 		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
 		6675D0F323F59B54002E8880 /* TextinputHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675D0F223F59B54002E8880 /* TextinputHelper.swift */; };
 		6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 6683ADAF23DBDEE7004ADADD /* TextEditor.js */; };
+		669043CA24016227009341DF /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669043C924016227009341DF /* ConfigurationViewController.swift */; };
 		66A20C9A23FED1AD00BCDA01 /* CommandLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A20C9823FED1AD00BCDA01 /* CommandLine@2x.png */; };
 		66A20C9B23FED1AD00BCDA01 /* CommandLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A20C9923FED1AD00BCDA01 /* CommandLine@3x.png */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
@@ -104,6 +105,7 @@
 		665C236C23F1A47D00C8E4B5 /* Hack-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hack-Regular.ttf"; sourceTree = "<group>"; };
 		6675D0F223F59B54002E8880 /* TextinputHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextinputHelper.swift; sourceTree = "<group>"; };
 		6683ADAF23DBDEE7004ADADD /* TextEditor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TextEditor.js; sourceTree = "<group>"; };
+		669043C924016227009341DF /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		66A20C9823FED1AD00BCDA01 /* CommandLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CommandLine@2x.png"; path = "Designs/CommandLine@2x.png"; sourceTree = SOURCE_ROOT; };
 		66A20C9923FED1AD00BCDA01 /* CommandLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CommandLine@3x.png"; path = "Designs/CommandLine@3x.png"; sourceTree = SOURCE_ROOT; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				66307FC923C4D21100AE7027 /* DocumentBrowserViewController.swift */,
 				66307FCB23C4D21100AE7027 /* DocumentViewController.swift */,
+				669043C924016227009341DF /* ConfigurationViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				66307FCE23C4D21100AE7027 /* CodePadDocument.swift in Sources */,
 				664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */,
 				66307FCC23C4D21100AE7027 /* DocumentViewController.swift in Sources */,
+				669043CA24016227009341DF /* ConfigurationViewController.swift in Sources */,
 				66307FCA23C4D21100AE7027 /* DocumentBrowserViewController.swift in Sources */,
 				66307FC823C4D21100AE7027 /* AppDelegate.swift in Sources */,
 			);
