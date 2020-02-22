@@ -50,10 +50,9 @@ class DocumentViewController: UIViewController {
     
     fileprivate func setNavbar() {
         self.title = document?.fileURL.lastPathComponent
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Command Icon"), style: .plain, target: self, action: #selector(openCommandPallete))
     }
     
-    @objc func openCommandPallete() {
+    @IBAction func commandPalleteButtonTapped(_ sender: Any) {
         #if targetEnvironment(simulator)
         print("Command Palette Button Tapped")
         #endif

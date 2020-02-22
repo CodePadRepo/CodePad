@@ -38,9 +38,9 @@
                         <viewLayoutGuide key="safeArea" id="BoZ-jc-2Y8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Code" id="yHv-nZ-boh">
-                        <barButtonItem key="rightBarButtonItem" title="Command Pallete" id="fBW-oD-D9u">
+                        <barButtonItem key="rightBarButtonItem" title="Command Pallete" image="Command Icon" id="fBW-oD-D9u">
                             <connections>
-                                <action selector="tapCommandPaletteButton:" destination="M2k-L8-Olo" id="Oeb-VU-Xvg"/>
+                                <action selector="commandPalleteButtonTapped:" destination="M2k-L8-Olo" id="Ow5-Gp-V5M"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -545,5 +545,8 @@
             <point key="canvasLocation" x="142.02898550724638" y="653.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Command Icon" width="28" height="28"/>
+    </resources>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
