@@ -50,7 +50,20 @@ class DocumentViewController: UIViewController {
     
     fileprivate func setNavbar() {
         self.title = document?.fileURL.lastPathComponent
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Command Icon"), style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Command Icon"), style: .plain, target: self, action: #selector(openCommandPallete))
+    }
+    
+    @objc func openCommandPallete() {
+        #if targetEnvironment(simulator)
+        print("Command Palette Button Tapped")
+        #endif
+        self.webView.evaluateJavaScript("editor.execCommand(editor.commands.byName.openCommandPallete);") { (result, error) in
+            if error != nil {
+                #if targetEnvironment(simulator)
+                print("Failed to open command pallete")
+                #endif
+            }
+        }
     }
     
     override func viewDidLoad() {
