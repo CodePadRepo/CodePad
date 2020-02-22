@@ -32,6 +32,7 @@ CodePad is a simple code editor for iOS. It is currently work-in-progress.
 - [ ] Running code using online compiler APIs
 
 ### `P2`: Auxiliary Features, can be implemented after `v1.0.0`
+- [ ] Support for iPad
 - [ ] Running code natively on device
 - [ ] Semantic code completion
 - [ ] Keyboard shortcuts for external keyboards
