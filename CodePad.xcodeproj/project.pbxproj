@@ -180,7 +180,7 @@
 				66F50EFB23F2F4E200A02EDE /* Models */,
 				66B3519923EE6FEC008DD45D /* Infrastructure */,
 				668BA9AC23EC540800C872A9 /* View Controllers */,
-				668BA9AB23EC53ED00C872A9 /* Helpers */,
+				668BA9AB23EC53ED00C872A9 /* Helpers and Protocols */,
 				665C235B23F1A3EC00C8E4B5 /* Resources */,
 				661B18B823FD7B4F003486C5 /* Storyboards */,
 				66307FD223C4D21300AE7027 /* Assets.xcassets */,
@@ -262,14 +262,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		668BA9AB23EC53ED00C872A9 /* Helpers */ = {
+		668BA9AB23EC53ED00C872A9 /* Helpers and Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				66FE439F23EB00A800CBE703 /* URLHelper.swift */,
 				664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */,
 				669043CB2401682B009341DF /* ColorBrightnessHelper.swift */,
 			);
-			path = Helpers;
+			path = "Helpers and Protocols";
 			sourceTree = "<group>";
 		};
 		668BA9AC23EC540800C872A9 /* View Controllers */ = {
