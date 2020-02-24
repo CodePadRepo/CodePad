@@ -23,7 +23,6 @@ extension IndentationType {
     }
 }
 
-let sharedCodePadConfiguration = CodePadConfiguration()
 class CodePadConfiguration {
     let indentationTypeKey = "indentationType"
     var indentationType: IndentationType = .spaces {
