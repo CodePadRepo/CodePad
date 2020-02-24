@@ -34,4 +34,9 @@ class CodePadConfigurationTests: XCTestCase {
         conf.indentationSize = 2
         XCTAssertEqual(conf.indentationSize, UserDefaults.standard.value(forKey: "indentationSize") as! Int)
     }
+    
+    func testIndentationType() {
+        XCTAssertEqual(IndentationType.tabs, IndentationType(0))
+        XCTAssertEqual(IndentationType.spaces, IndentationType(1))
+    }
 }
