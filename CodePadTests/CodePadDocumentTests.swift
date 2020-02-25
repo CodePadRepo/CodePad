@@ -10,14 +10,6 @@ import XCTest
 @testable import CodePad
 
 class CodePadDocumentTests: XCTestCase {
-
-    override func setUp() {
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testCodePadDocumentContents() {
         let testDoc = MockCodePadDocument(fileURL: URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("test.py"))
         let sampleCode = "print('Hello, world!')"
