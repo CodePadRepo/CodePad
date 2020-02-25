@@ -12,13 +12,12 @@ import XCTest
 class ColorBrightnessTests: XCTestCase {
     func testColorBrightness() {
         let white = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        XCTAssert(white.isLight()!)
+        XCTAssert(white.isLight)
         let black = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-        XCTAssert(!black.isLight()!)
-        XCTAssert(!black.isLight(threshold: 0.0)!)
+        XCTAssert(!black.isLight)
         let yellow = UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
-        XCTAssert(yellow.isLight()!)
+        XCTAssert(yellow.isLight)
         let cyan = UIColor(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        XCTAssert(cyan.isLight()!)
+        XCTAssert(cyan.isLight)
     }
 }
