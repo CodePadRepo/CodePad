@@ -21,8 +21,8 @@ class CodePadConfigurationTests: XCTestCase {
     }
 
     override func tearDown() {
-        UserDefaults.standard.set(indentationSizeBeforeTest, forKey: "indentationType")
-        UserDefaults.standard.set(indentationSizeBeforeTest, forKey: "indentationSize")
+        UserDefaults.standard.removeObject(forKey: "indentationType")
+        UserDefaults.standard.removeObject(forKey: "indentationSize")
     }
 
     func testCodePadConfiguration() {
