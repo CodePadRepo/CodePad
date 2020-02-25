@@ -21,6 +21,10 @@ class CodePadConfigurationTests: XCTestCase {
     }
 
     override func tearDown() {
+        cleanUp()
+    }
+    
+    fileprivate func cleanUp() {
         UserDefaults.standard.removeObject(forKey: "indentationType")
         UserDefaults.standard.removeObject(forKey: "indentationSize")
     }
