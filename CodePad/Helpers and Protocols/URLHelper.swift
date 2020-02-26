@@ -10,9 +10,7 @@ import UIKit
 
 extension UIApplication {
     static func cacheURL() -> URL {
-        guard let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
-            fatalError("Unable to get system cache directory")
-        }
+        let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
         return cacheURL
     }
 }
