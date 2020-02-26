@@ -4,6 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/sohnryang/CodePad)](https://github.com/sohnryang/CodePad/issues)
 [![Build Status](https://travis-ci.com/sohnryang/CodePad.svg?branch=master)](https://travis-ci.com/sohnryang/CodePad)
 [![codecov](https://codecov.io/gh/sohnryang/CodePad/branch/master/graph/badge.svg)](https://codecov.io/gh/sohnryang/CodePad)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
 ## What?
 
@@ -24,6 +25,7 @@ CodePad is a simple code editor for iOS. It is currently work-in-progress.
 - [x] Unit tests
 - [x] UI automation tests
 - [x] CI using TravisCI/GitHub Actions
+- [ ] Automation using fastlane
 
 ### `P1`: Important Features, should be implemented by `v0.2.0`
 - [ ] Share menu
