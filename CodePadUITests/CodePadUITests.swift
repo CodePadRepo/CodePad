@@ -20,10 +20,6 @@ class CodePadUITests: XCTestCase {
         ]
     }
 
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testDocumentCreation() {
         app.launch()
         
