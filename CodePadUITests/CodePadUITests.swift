@@ -40,6 +40,10 @@ class CodePadUITests: XCTestCase {
         XCTAssertEqual(filenameTextfield.placeholderValue, "File name")
         filenameTextfield.clearAndTypeText(newFileName)
         app.alerts.element.buttons["OK"].tap()
+        
+        sleep(2)
+        XCTAssert(app.webViews.firstMatch.exists)
+        XCTAssert(app.staticTexts[newFileName].exists)
     }
 
 }
