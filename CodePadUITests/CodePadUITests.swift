@@ -42,8 +42,10 @@ class CodePadUITests: XCTestCase {
         app.alerts.element.buttons["OK"].tap()
         
         sleep(2)
+        app.webViews.firstMatch.screenshot()
+        app.windows.firstMatch.screenshot()
         XCTAssert(app.webViews.firstMatch.exists)
-        XCTAssert(app.staticTexts[newFileName].exists)
+        XCTAssert(app.staticTexts.matching(NSPredicate(format: "label CONTAINS '\(newFileName)'")).firstMatch.exists)
     }
 
 }
