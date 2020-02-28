@@ -41,7 +41,7 @@ class CodePadUITests: XCTestCase {
         filenameTextfield.clearAndTypeText(newFileName)
         app.alerts.element.buttons["OK"].tap()
         
-        sleep(2)
+        sleep(10)
         app.webViews.firstMatch.screenshot()
         app.windows.firstMatch.screenshot()
         XCTAssert(app.webViews.firstMatch.exists)
