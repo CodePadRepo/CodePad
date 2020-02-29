@@ -19,6 +19,13 @@ enum IndentationType: String {
         default: return nil
         }
     }
+    
+    func ordinal() -> Int {
+        switch self {
+        case .tabs: return 0
+        case .spaces: return 1
+        }
+    }
 }
 
 class CodePadConfiguration {
