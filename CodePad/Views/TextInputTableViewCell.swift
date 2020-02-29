@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TextInputTableViewCellDelegate: class {
+    func textInputEdited()
+}
+
 @IBDesignable
 class TextInputTableViewCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var cellTextLabel: UILabel!
@@ -22,10 +26,20 @@ class TextInputTableViewCell: UITableViewCell, NibLoadable {
             textInput.placeholder = textInputPlaceholder
         }
     }
+    weak var delegate: TextInputTableViewCellDelegate?
+    var textInputEdited: (() -> Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupFromNib()
+    }
+    
+    @IBAction func textInputEditingChanged(_ sender: Any) {
+        if textInputEdited != nil {
+            textInputEdited!()
+        } else {
+            delegate?.textInputEdited()
+        }
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

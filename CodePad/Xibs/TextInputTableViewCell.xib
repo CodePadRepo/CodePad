@@ -31,6 +31,9 @@
                         <rect key="frame" x="162" y="5" width="76.5" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="textInputEditingChanged:" destination="-1" eventType="editingChanged" id="0N4-hK-cxx"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>
