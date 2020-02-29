@@ -41,6 +41,7 @@ class IndentaionControllerViewController: UITableViewController, TextInputTableV
         } else {
             let indentSizeCell = cell as! TextInputTableViewCell
             indentSizeCell.textInput.text = String(config.indentationSize)
+            cell.selectionStyle = .none
         }
     }
     
