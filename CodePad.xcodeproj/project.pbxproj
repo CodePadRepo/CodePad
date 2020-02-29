@@ -41,6 +41,9 @@
 		6683ADB023DBDEE7004ADADD /* TextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 6683ADAF23DBDEE7004ADADD /* TextEditor.js */; };
 		669043CA24016227009341DF /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669043C924016227009341DF /* ConfigurationViewController.swift */; };
 		669043CC2401682B009341DF /* ColorBrightnessHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669043CB2401682B009341DF /* ColorBrightnessHelper.swift */; };
+		669478B2240A52FB00ACF047 /* TextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669478B1240A52FB00ACF047 /* TextInputTableViewCell.swift */; };
+		669478B5240A53DD00ACF047 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669478B4240A53DD00ACF047 /* NibLoadable.swift */; };
+		669478B9240A54A500ACF047 /* TextInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 669478B8240A54A500ACF047 /* TextInputTableViewCell.xib */; };
 		66A20C9A23FED1AD00BCDA01 /* CommandLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A20C9823FED1AD00BCDA01 /* CommandLine@2x.png */; };
 		66A20C9B23FED1AD00BCDA01 /* CommandLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66A20C9923FED1AD00BCDA01 /* CommandLine@3x.png */; };
 		66AF4663240296B9000391EA /* ColorBrightnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4662240296B9000391EA /* ColorBrightnessTests.swift */; };
@@ -113,6 +116,9 @@
 		6683ADAF23DBDEE7004ADADD /* TextEditor.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TextEditor.js; sourceTree = "<group>"; };
 		669043C924016227009341DF /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		669043CB2401682B009341DF /* ColorBrightnessHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBrightnessHelper.swift; sourceTree = "<group>"; };
+		669478B1240A52FB00ACF047 /* TextInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputTableViewCell.swift; sourceTree = "<group>"; };
+		669478B4240A53DD00ACF047 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		669478B8240A54A500ACF047 /* TextInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputTableViewCell.xib; sourceTree = "<group>"; };
 		66A20C9823FED1AD00BCDA01 /* CommandLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CommandLine@2x.png"; path = "Designs/CommandLine@2x.png"; sourceTree = SOURCE_ROOT; };
 		66A20C9923FED1AD00BCDA01 /* CommandLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CommandLine@3x.png"; path = "Designs/CommandLine@3x.png"; sourceTree = SOURCE_ROOT; };
 		66AF4662240296B9000391EA /* ColorBrightnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBrightnessTests.swift; sourceTree = "<group>"; };
@@ -184,12 +190,14 @@
 		66307FC623C4D21100AE7027 /* CodePad */ = {
 			isa = PBXGroup;
 			children = (
+				669478B0240A52E900ACF047 /* Views */,
 				66F50EFB23F2F4E200A02EDE /* Models */,
 				66B3519923EE6FEC008DD45D /* Infrastructure */,
 				668BA9AC23EC540800C872A9 /* View Controllers */,
 				668BA9AB23EC53ED00C872A9 /* Helpers and Protocols */,
 				665C235B23F1A3EC00C8E4B5 /* Resources */,
 				661B18B823FD7B4F003486C5 /* Storyboards */,
+				669478B7240A548D00ACF047 /* Xibs */,
 				66307FD223C4D21300AE7027 /* Assets.xcassets */,
 				66307FD723C4D21300AE7027 /* Info.plist */,
 			);
@@ -276,6 +284,7 @@
 				66FE439F23EB00A800CBE703 /* URLHelper.swift */,
 				664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */,
 				669043CB2401682B009341DF /* ColorBrightnessHelper.swift */,
+				669478B4240A53DD00ACF047 /* NibLoadable.swift */,
 			);
 			path = "Helpers and Protocols";
 			sourceTree = "<group>";
@@ -297,6 +306,22 @@
 				663C9734240A36CD00936392 /* Local Test Plan.xctestplan */,
 			);
 			path = "Test Plans";
+			sourceTree = "<group>";
+		};
+		669478B0240A52E900ACF047 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				669478B1240A52FB00ACF047 /* TextInputTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		669478B7240A548D00ACF047 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				669478B8240A54A500ACF047 /* TextInputTableViewCell.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 		66A20C9323FED17800BCDA01 /* Icons */ = {
@@ -460,6 +485,7 @@
 				66A20C9A23FED1AD00BCDA01 /* CommandLine@2x.png in Resources */,
 				661B18B223FC0E1F003486C5 /* Inconsolata-Bold.ttf in Resources */,
 				665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */,
+				669478B9240A54A500ACF047 /* TextInputTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,9 +535,11 @@
 				66AF46722402B9B0000391EA /* CodePadConfiguration.swift in Sources */,
 				66307FCE23C4D21100AE7027 /* CodePadDocument.swift in Sources */,
 				664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */,
+				669478B2240A52FB00ACF047 /* TextInputTableViewCell.swift in Sources */,
 				66307FCC23C4D21100AE7027 /* DocumentViewController.swift in Sources */,
 				669043CA24016227009341DF /* ConfigurationViewController.swift in Sources */,
 				66307FCA23C4D21100AE7027 /* DocumentBrowserViewController.swift in Sources */,
+				669478B5240A53DD00ACF047 /* NibLoadable.swift in Sources */,
 				669043CC2401682B009341DF /* ColorBrightnessHelper.swift in Sources */,
 				66307FC823C4D21100AE7027 /* AppDelegate.swift in Sources */,
 			);
