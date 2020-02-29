@@ -41,7 +41,7 @@ class CodePadUITests: XCTestCase {
         filenameTextfield.clearAndTypeText(newFileName)
         app.alerts.element.buttons["OK"].tap()
         
-        sleep(10)
+        sleep(2)
         XCTAssert(app.webViews.firstMatch.waitForExistence(timeout: 100))
         XCTAssert(app.staticTexts.matching(NSPredicate(format: "label CONTAINS '\(newFileName)'")).firstMatch.exists)
     }
