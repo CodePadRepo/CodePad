@@ -11,9 +11,7 @@ import Foundation
 enum IndentationType: String {
     case tabs
     case spaces
-}
-
-extension IndentationType {
+    
     init?(_ int: Int) {
         switch int {
         case 0: self = .tabs
