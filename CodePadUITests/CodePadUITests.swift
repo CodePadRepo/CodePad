@@ -24,6 +24,7 @@ class CodePadUITests: XCTestCase {
         app.launch()
         
         sleep(2)
+        XCTAssert(app.buttons["Add"].waitForExistence(timeout: 20))
         app.buttons["Add"].tap()
         
         sleep(2)
