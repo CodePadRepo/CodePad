@@ -12,6 +12,16 @@ import UIKit
 class TextInputTableViewCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var cellTextLabel: UILabel!
     @IBOutlet weak var textInput: UITextField!
+    @IBInspectable var cellText: String! {
+        didSet {
+            cellTextLabel.text = cellText
+        }
+    }
+    @IBInspectable var textInputPlaceholder: String! {
+        didSet {
+            textInput.placeholder = textInputPlaceholder
+        }
+    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
