@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "2E104903-D726-4142-9A36-2BB9E8B5351B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "uiTestingScreenshotsLifetime" : "keepNever"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CodePad.xcodeproj",
+        "identifier" : "66307FDB23C4D21300AE7027",
+        "name" : "CodePadTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:CodePad.xcodeproj",
+        "identifier" : "66307FE623C4D21400AE7027",
+        "name" : "CodePadUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

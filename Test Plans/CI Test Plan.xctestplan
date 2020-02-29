@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "E62D0D18-43C7-41C8-BE0A-B3ABFA421CF0",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CodePad.xcodeproj",
+        "identifier" : "66307FDB23C4D21300AE7027",
+        "name" : "CodePadTests"
+      }
+    }
+  ],
+  "version" : 1
+}
