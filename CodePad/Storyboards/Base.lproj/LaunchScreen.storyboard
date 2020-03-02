@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Big App Icon" translatesAutoresizingMaskIntoConstraints="NO" id="wgt-lV-5O1">
-                                <rect key="frame" x="131.5" y="372.5" width="150" height="150"/>
+                                <rect key="frame" x="131.5" y="323" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="7mh-td-Rde"/>
                                     <constraint firstAttribute="width" constant="150" id="I6Z-rs-SvT"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="zzn-ll-Q0J">
-                                <rect key="frame" x="157" y="532.5" width="100" height="32"/>
+                                <rect key="frame" x="157" y="483" width="100" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="LGC-PE-Md3"/>
                                     <constraint firstAttribute="width" constant="100" id="Nme-Es-D6Y"/>
@@ -35,7 +35,7 @@
                         <constraints>
                             <constraint firstItem="zzn-ll-Q0J" firstAttribute="top" secondItem="wgt-lV-5O1" secondAttribute="bottom" constant="10" id="OAv-r3-NmI"/>
                             <constraint firstItem="zzn-ll-Q0J" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PZQ-Fb-Cot"/>
-                            <constraint firstItem="wgt-lV-5O1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-0.5" id="snK-Id-UPc"/>
+                            <constraint firstItem="wgt-lV-5O1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="snK-Id-UPc"/>
                             <constraint firstItem="wgt-lV-5O1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-0.5" id="tLC-Cx-nDJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
