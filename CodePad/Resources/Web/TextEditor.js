@@ -1,9 +1,14 @@
 modelist = ace.require("ace/ext/modelist");
 
-initializeEditor = (theme, filename, editorContent) => {
+initializeEditor = (theme, filename, editorContent, indentSize, indentType) => {
     editor = ace.edit("editor");
     editor.setTheme(`ace/theme/${theme}`);
     const mode = modelist.getModeForPath(filename).mode
+    editor.session.setOptions({
+        tabSize: indentSize,
+        showInvisibles: true,
+        useSoftTabs: Boolean(indentType)
+    });
     editor.session.setMode(mode);
     editor.setValue(editorContent)
     editor.getSession().setUndoManager(new ace.UndoManager())

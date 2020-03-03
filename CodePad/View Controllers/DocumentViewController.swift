@@ -11,6 +11,7 @@ import WebKit
 
 class DocumentViewController: UIViewController {
     var document: CodePadDocument?
+    var config: CodePadConfiguration!
     var webView: WKWebView!
     var theme: String!
 
@@ -46,6 +47,8 @@ class DocumentViewController: UIViewController {
             print("Color theme not set")
             #endif
         }
+        
+        config = CodePadConfiguration()
     }
     
     fileprivate func setNavbar() {
@@ -119,7 +122,7 @@ class DocumentViewController: UIViewController {
     fileprivate func initializeEditor() {
         let theme = self.theme!
         let filename = self.document!.fileURL.lastPathComponent
-        self.webView.evaluateJavaScript("initializeEditor('\(theme)', '\(filename)', `\(document!.code.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "`", with: "\\`"))`)") { (result, error) in
+        self.webView.evaluateJavaScript("initializeEditor('\(theme)', '\(filename)', `\(document!.code.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "`", with: "\\`"))`, \(config.indentationSize), \(config.indentationType.ordinal()))") { (result, error) in
             if error != nil {
                 #if targetEnvironment(simulator)
                 print("Failed to initialize editor")
