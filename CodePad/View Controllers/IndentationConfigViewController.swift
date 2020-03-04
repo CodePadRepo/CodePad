@@ -50,9 +50,7 @@ class IndentaionControllerViewController: UITableViewController, TextInputTableV
         tableView.deselectRow(at: indexPath, animated: true)
         let previousIndentType = config.indentationType
         let currentIndentType: IndentationType = IndentationType(indexPath.row)!
-        if previousIndentType == currentIndentType {
-            return
-        }
+        guard previousIndentType != currentIndentType else { return }
         
         if let previousCell = tableView.cellForRow(at: IndexPath(row: previousIndentType.ordinal(), section: indexPath.section)) {
             previousCell.accessoryType = .none
