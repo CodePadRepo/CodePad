@@ -57,7 +57,7 @@ class CodePadConfiguration {
     }
     
     init() {
-        self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as? String ?? IndentationType(rawValue: IndentationType.spaces.rawValue)!.rawValue)!
+        self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as? String ?? IndentationType.spaces.rawValue)!
         self.indentationSize = UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as? Int ?? 4
         self.keybindingType = KeybindingType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as? String ?? KeybindingType.vscode.rawValue)!
     }
