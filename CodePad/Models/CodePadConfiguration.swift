@@ -28,6 +28,14 @@ enum IndentationType: String {
     }
 }
 
+enum KeybindingType: String {
+    case ace
+    case vim
+    case emacs
+    case sublime
+    case vscode
+}
+
 class CodePadConfiguration {
     static let indentationTypeKey = "indentationType"
     var indentationType: IndentationType = .spaces {

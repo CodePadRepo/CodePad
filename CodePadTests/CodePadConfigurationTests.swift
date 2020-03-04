@@ -47,6 +47,14 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(IndentationType.spaces.ordinal(), 1)
     }
     
+    func testKeybindingType() {
+        XCTAssertEqual(KeybindingType.ace.rawValue, "ace")
+        XCTAssertEqual(KeybindingType.vim.rawValue, "vim")
+        XCTAssertEqual(KeybindingType.emacs.rawValue, "emacs")
+        XCTAssertEqual(KeybindingType.sublime.rawValue, "sublime")
+        XCTAssertEqual(KeybindingType.vscode.rawValue, "vscode")
+    }
+    
     func testDefaultConfiguration() {
         cleanUp()
         let conf = CodePadConfiguration()
