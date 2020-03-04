@@ -50,6 +50,7 @@
 		66AF46702402B678000391EA /* IndentationConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF466F2402B678000391EA /* IndentationConfigViewController.swift */; };
 		66AF46722402B9B0000391EA /* CodePadConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF46712402B9B0000391EA /* CodePadConfiguration.swift */; };
 		66AF46742402BEDB000391EA /* CodePadConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF46732402BEDB000391EA /* CodePadConfigurationTests.swift */; };
+		66B4131A240FEC37007910F9 /* KeybindingConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
 		66F50EFC23F2F53600A02EDE /* MockCodePadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */; };
 		66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE439F23EB00A800CBE703 /* URLHelper.swift */; };
@@ -126,6 +127,7 @@
 		66AF466F2402B678000391EA /* IndentationConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentationConfigViewController.swift; sourceTree = "<group>"; };
 		66AF46712402B9B0000391EA /* CodePadConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadConfiguration.swift; sourceTree = "<group>"; };
 		66AF46732402BEDB000391EA /* CodePadConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadConfigurationTests.swift; sourceTree = "<group>"; };
+		66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybindingConfigViewController.swift; sourceTree = "<group>"; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
 		66DEE444240BFF79006E969D /* CodePad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodePad.entitlements; sourceTree = "<group>"; };
 		66FE439F23EB00A800CBE703 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				66307FCB23C4D21100AE7027 /* DocumentViewController.swift */,
 				669043C924016227009341DF /* ConfigurationViewController.swift */,
 				66AF466F2402B678000391EA /* IndentationConfigViewController.swift */,
+				66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 			files = (
 				66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */,
 				66AF46722402B9B0000391EA /* CodePadConfiguration.swift in Sources */,
+				66B4131A240FEC37007910F9 /* KeybindingConfigViewController.swift in Sources */,
 				66307FCE23C4D21100AE7027 /* CodePadDocument.swift in Sources */,
 				664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */,
 				66AF46702402B678000391EA /* IndentationConfigViewController.swift in Sources */,
