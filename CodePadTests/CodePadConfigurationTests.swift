@@ -12,12 +12,15 @@ import XCTest
 class CodePadConfigurationTests: XCTestCase {
     var indentationTypeBeforeTest: String!
     var indentationSizeBeforeTest: Int!
+    var keybindingTypeBeforeTest: String!
 
     override func setUp() {
         UserDefaults.standard.set(IndentationType.spaces.rawValue, forKey: CodePadConfiguration.indentationTypeKey)
         UserDefaults.standard.set(4, forKey: CodePadConfiguration.indentationSizeKey)
+        UserDefaults.standard.set(KeybindingType.ace.rawValue, forKey: CodePadConfiguration.keybindingTypeKey)
         indentationTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         indentationSizeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as! Int)
+        keybindingTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as! String)
     }
 
     override func tearDown() {
@@ -27,16 +30,20 @@ class CodePadConfigurationTests: XCTestCase {
     fileprivate func cleanUp() {
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.indentationTypeKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.indentationSizeKey)
+        UserDefaults.standard.removeObject(forKey: CodePadConfiguration.keybindingTypeKey)
     }
 
     func testCodePadConfiguration() {
         let conf = CodePadConfiguration()
         XCTAssertEqual(conf.indentationType.rawValue, indentationTypeBeforeTest)
         XCTAssertEqual(conf.indentationSize, indentationSizeBeforeTest)
+        XCTAssertEqual(conf.keybindingType.rawValue, keybindingTypeBeforeTest)
         conf.indentationType = .tabs
         XCTAssertEqual(conf.indentationType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         conf.indentationSize = 2
         XCTAssertEqual(conf.indentationSize, UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as! Int)
+        conf.keybindingType = .vim
+        XCTAssertEqual(conf.keybindingType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as! String)
     }
     
     func testIndentationType() {
@@ -60,5 +67,6 @@ class CodePadConfigurationTests: XCTestCase {
         let conf = CodePadConfiguration()
         XCTAssertEqual(conf.indentationType, IndentationType.spaces)
         XCTAssertEqual(conf.indentationSize, 4)
+        XCTAssertEqual(conf.keybindingType, KeybindingType.vscode)
     }
 }

@@ -49,9 +49,16 @@ class CodePadConfiguration {
             UserDefaults.standard.setValue(indentationSize, forKeyPath: CodePadConfiguration.indentationSizeKey)
         }
     }
+    static let keybindingTypeKey = "keybindingType"
+    var keybindingType: KeybindingType = .vscode {
+        didSet {
+            UserDefaults.standard.setValue(self.keybindingType.rawValue, forKeyPath: CodePadConfiguration.keybindingTypeKey)
+        }
+    }
     
     init() {
         self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as? String ?? IndentationType(rawValue: IndentationType.spaces.rawValue)!.rawValue)!
         self.indentationSize = UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as? Int ?? 4
+        self.keybindingType = KeybindingType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as? String ?? KeybindingType.vscode.rawValue)!
     }
 }
