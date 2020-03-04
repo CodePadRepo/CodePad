@@ -14,9 +14,9 @@ class CodePadConfigurationTests: XCTestCase {
     var indentationSizeBeforeTest: Int!
 
     override func setUp() {
-        UserDefaults.standard.set(IndentationType.spaces.rawValue, forKey: "indentationType")
+        UserDefaults.standard.set(IndentationType.spaces.rawValue, forKey: CodePadConfiguration.indentationTypeKey)
         UserDefaults.standard.set(4, forKey: "indentationSize")
-        indentationTypeBeforeTest = (UserDefaults.standard.value(forKey: "indentationType") as! String)
+        indentationTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         indentationSizeBeforeTest = (UserDefaults.standard.value(forKey: "indentationSize") as! Int)
     }
 
@@ -25,7 +25,7 @@ class CodePadConfigurationTests: XCTestCase {
     }
     
     fileprivate func cleanUp() {
-        UserDefaults.standard.removeObject(forKey: "indentationType")
+        UserDefaults.standard.removeObject(forKey: CodePadConfiguration.indentationTypeKey)
         UserDefaults.standard.removeObject(forKey: "indentationSize")
     }
 
@@ -34,7 +34,7 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.indentationType.rawValue, indentationTypeBeforeTest)
         XCTAssertEqual(conf.indentationSize, indentationSizeBeforeTest)
         conf.indentationType = .tabs
-        XCTAssertEqual(conf.indentationType.rawValue, UserDefaults.standard.value(forKey: "indentationType") as! String)
+        XCTAssertEqual(conf.indentationType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         conf.indentationSize = 2
         XCTAssertEqual(conf.indentationSize, UserDefaults.standard.value(forKey: "indentationSize") as! Int)
     }

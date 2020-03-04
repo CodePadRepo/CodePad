@@ -29,21 +29,21 @@ enum IndentationType: String {
 }
 
 class CodePadConfiguration {
-    let indentationTypeKey = "indentationType"
+    static let indentationTypeKey = "indentationType"
     var indentationType: IndentationType = .spaces {
         didSet {
-            UserDefaults.standard.setValue(self.indentationType.rawValue, forKeyPath: indentationTypeKey)
+            UserDefaults.standard.setValue(self.indentationType.rawValue, forKeyPath: CodePadConfiguration.indentationTypeKey)
         }
     }
-    let indentationSizeKey = "indentationSize"
+    static let indentationSizeKey = "indentationSize"
     var indentationSize: Int = 4 {
         didSet {
-            UserDefaults.standard.setValue(indentationSize, forKeyPath: indentationSizeKey)
+            UserDefaults.standard.setValue(indentationSize, forKeyPath: CodePadConfiguration.indentationSizeKey)
         }
     }
     
     init() {
-        self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: indentationTypeKey) as? String ?? IndentationType(rawValue: IndentationType.spaces.rawValue)!.rawValue)!
-        self.indentationSize = UserDefaults.standard.value(forKey: indentationSizeKey) as? Int ?? 4
+        self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as? String ?? IndentationType(rawValue: IndentationType.spaces.rawValue)!.rawValue)!
+        self.indentationSize = UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as? Int ?? 4
     }
 }
