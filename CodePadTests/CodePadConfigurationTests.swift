@@ -60,6 +60,17 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(KeybindingType.emacs.rawValue, "emacs")
         XCTAssertEqual(KeybindingType.sublime.rawValue, "sublime")
         XCTAssertEqual(KeybindingType.vscode.rawValue, "vscode")
+        XCTAssertEqual(KeybindingType.ace.ordinal(), 0)
+        XCTAssertEqual(KeybindingType.vim.ordinal(), 1)
+        XCTAssertEqual(KeybindingType.emacs.ordinal(), 2)
+        XCTAssertEqual(KeybindingType.sublime.ordinal(), 3)
+        XCTAssertEqual(KeybindingType.vscode.ordinal(), 4)
+        XCTAssertEqual(KeybindingType.ace, KeybindingType(0))
+        XCTAssertEqual(KeybindingType.vim, KeybindingType(1))
+        XCTAssertEqual(KeybindingType.emacs, KeybindingType(2))
+        XCTAssertEqual(KeybindingType.sublime, KeybindingType(3))
+        XCTAssertEqual(KeybindingType.vscode, KeybindingType(4))
+        XCTAssertNil(KeybindingType(5))
     }
     
     func testDefaultConfiguration() {

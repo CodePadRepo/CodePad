@@ -34,6 +34,27 @@ enum KeybindingType: String {
     case emacs
     case sublime
     case vscode
+    
+    init?(_ int: Int) {
+        switch int {
+        case 0: self = .ace
+        case 1: self = .vim
+        case 2: self = .emacs
+        case 3: self = .sublime
+        case 4: self = .vscode
+        default: return nil
+        }
+    }
+    
+    func ordinal() -> Int {
+        switch self {
+        case .ace: return 0
+        case .vim: return 1
+        case .emacs: return 2
+        case .sublime: return 3
+        case .vscode: return 4
+        }
+    }
 }
 
 class CodePadConfiguration {
