@@ -1,6 +1,6 @@
 modelist = ace.require("ace/ext/modelist");
 
-initializeEditor = (theme, filename, editorContent, indentSize, indentType) => {
+initializeEditor = (theme, filename, editorContent, indentSize, indentType, keybindingType) => {
     editor = ace.edit("editor");
     editor.setTheme(`ace/theme/${theme}`);
     const mode = modelist.getModeForPath(filename).mode
@@ -9,6 +9,10 @@ initializeEditor = (theme, filename, editorContent, indentSize, indentType) => {
         showInvisibles: true,
         useSoftTabs: Boolean(indentType)
     });
+    if (keybindingType != "ace") {
+        const handler = ace.require(`ace/keyboard/${keybindingType}`).handler;
+        editor.setKeyboardHandler(handler);
+    }
     editor.session.setMode(mode);
     editor.setValue(editorContent)
     editor.getSession().setUndoManager(new ace.UndoManager())
