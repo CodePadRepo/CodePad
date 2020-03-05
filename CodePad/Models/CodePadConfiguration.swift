@@ -76,10 +76,17 @@ class CodePadConfiguration {
             UserDefaults.standard.setValue(self.keybindingType.rawValue, forKeyPath: CodePadConfiguration.keybindingTypeKey)
         }
     }
+    static let colorSchemeKey = "colorScheme"
+    var colorScheme: String = "gruvbox" {
+        didSet {
+            UserDefaults.standard.setValue(self.colorScheme, forKeyPath: CodePadConfiguration.colorSchemeKey)
+        }
+    }
     
     init() {
         self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as? String ?? IndentationType.spaces.rawValue)!
         self.indentationSize = UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as? Int ?? 4
         self.keybindingType = KeybindingType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as? String ?? KeybindingType.vscode.rawValue)!
+        self.colorScheme = UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as? String ?? "gruvbox"
     }
 }

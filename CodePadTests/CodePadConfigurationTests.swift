@@ -13,14 +13,17 @@ class CodePadConfigurationTests: XCTestCase {
     var indentationTypeBeforeTest: String!
     var indentationSizeBeforeTest: Int!
     var keybindingTypeBeforeTest: String!
+    var colorSchemeBeforeTest: String!
 
     override func setUp() {
         UserDefaults.standard.set(IndentationType.spaces.rawValue, forKey: CodePadConfiguration.indentationTypeKey)
         UserDefaults.standard.set(4, forKey: CodePadConfiguration.indentationSizeKey)
         UserDefaults.standard.set(KeybindingType.ace.rawValue, forKey: CodePadConfiguration.keybindingTypeKey)
+        UserDefaults.standard.set("gruvbox", forKey: CodePadConfiguration.colorSchemeKey)
         indentationTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         indentationSizeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as! Int)
         keybindingTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as! String)
+        colorSchemeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as! String)
     }
 
     override func tearDown() {
@@ -31,6 +34,7 @@ class CodePadConfigurationTests: XCTestCase {
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.indentationTypeKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.indentationSizeKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.keybindingTypeKey)
+        UserDefaults.standard.removeObject(forKey: CodePadConfiguration.colorSchemeKey)
     }
 
     func testCodePadConfiguration() {
@@ -38,12 +42,15 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.indentationType.rawValue, indentationTypeBeforeTest)
         XCTAssertEqual(conf.indentationSize, indentationSizeBeforeTest)
         XCTAssertEqual(conf.keybindingType.rawValue, keybindingTypeBeforeTest)
+        XCTAssertEqual(conf.colorScheme, colorSchemeBeforeTest)
         conf.indentationType = .tabs
         XCTAssertEqual(conf.indentationType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         conf.indentationSize = 2
         XCTAssertEqual(conf.indentationSize, UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as! Int)
         conf.keybindingType = .vim
         XCTAssertEqual(conf.keybindingType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as! String)
+        conf.colorScheme = "chrome"
+        XCTAssertEqual(conf.colorScheme, UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as! String)
     }
     
     func testIndentationType() {
@@ -79,5 +86,6 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.indentationType, IndentationType.spaces)
         XCTAssertEqual(conf.indentationSize, 4)
         XCTAssertEqual(conf.keybindingType, KeybindingType.vscode)
+        XCTAssertEqual(conf.colorScheme, "gruvbox")
     }
 }
