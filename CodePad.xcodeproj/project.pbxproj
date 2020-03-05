@@ -33,7 +33,6 @@
 		66307FE123C4D21300AE7027 /* CodePadDocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FE023C4D21300AE7027 /* CodePadDocumentTests.swift */; };
 		6647EC6623F19FE0004053D3 /* CodePadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6523F19FE0004053D3 /* CodePadUITests.swift */; };
 		664C718A23E6B1C0005FEBC0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 664C718923E6B1C0005FEBC0 /* Settings.bundle */; };
-		664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */; };
 		665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 665C0F9F23DAC05600E29BA4 /* TextEditor.html */; };
 		665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 665C0FA323DAC56100E29BA4 /* TextEditor.css */; };
 		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
@@ -51,6 +50,7 @@
 		66AF46722402B9B0000391EA /* CodePadConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF46712402B9B0000391EA /* CodePadConfiguration.swift */; };
 		66AF46742402BEDB000391EA /* CodePadConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF46732402BEDB000391EA /* CodePadConfigurationTests.swift */; };
 		66B4131A240FEC37007910F9 /* KeybindingConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */; };
+		66B4131E241148D0007910F9 /* ColorSchemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4131D241148D0007910F9 /* ColorSchemeHelper.swift */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
 		66F50EFC23F2F53600A02EDE /* MockCodePadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */; };
 		66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE439F23EB00A800CBE703 /* URLHelper.swift */; };
@@ -94,7 +94,6 @@
 		6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCodePadDocument.swift; sourceTree = "<group>"; };
 		6647EC6523F19FE0004053D3 /* CodePadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadUITests.swift; sourceTree = "<group>"; };
 		664C718923E6B1C0005FEBC0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstsHelper.swift; sourceTree = "<group>"; };
 		665C0F9F23DAC05600E29BA4 /* TextEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TextEditor.html; sourceTree = "<group>"; };
 		665C0FA323DAC56100E29BA4 /* TextEditor.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = TextEditor.css; sourceTree = "<group>"; };
 		665C0FA623DAD13B00E29BA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -128,6 +127,7 @@
 		66AF46712402B9B0000391EA /* CodePadConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadConfiguration.swift; sourceTree = "<group>"; };
 		66AF46732402BEDB000391EA /* CodePadConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadConfigurationTests.swift; sourceTree = "<group>"; };
 		66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybindingConfigViewController.swift; sourceTree = "<group>"; };
+		66B4131D241148D0007910F9 /* ColorSchemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeHelper.swift; sourceTree = "<group>"; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
 		66DEE444240BFF79006E969D /* CodePad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodePad.entitlements; sourceTree = "<group>"; };
 		66FE439F23EB00A800CBE703 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
@@ -288,9 +288,9 @@
 			isa = PBXGroup;
 			children = (
 				66FE439F23EB00A800CBE703 /* URLHelper.swift */,
-				664C718D23E86490005FEBC0 /* GlobalConstsHelper.swift */,
 				669043CB2401682B009341DF /* ColorBrightnessHelper.swift */,
 				669478B4240A53DD00ACF047 /* NibLoadable.swift */,
+				66B4131D241148D0007910F9 /* ColorSchemeHelper.swift */,
 			);
 			path = "Helpers and Protocols";
 			sourceTree = "<group>";
@@ -543,9 +543,9 @@
 				66AF46722402B9B0000391EA /* CodePadConfiguration.swift in Sources */,
 				66B4131A240FEC37007910F9 /* KeybindingConfigViewController.swift in Sources */,
 				66307FCE23C4D21100AE7027 /* CodePadDocument.swift in Sources */,
-				664C718E23E86490005FEBC0 /* GlobalConstsHelper.swift in Sources */,
 				66AF46702402B678000391EA /* IndentationConfigViewController.swift in Sources */,
 				669478B2240A52FB00ACF047 /* TextInputTableViewCell.swift in Sources */,
+				66B4131E241148D0007910F9 /* ColorSchemeHelper.swift in Sources */,
 				66307FCC23C4D21100AE7027 /* DocumentViewController.swift in Sources */,
 				669043CA24016227009341DF /* ConfigurationViewController.swift in Sources */,
 				66307FCA23C4D21100AE7027 /* DocumentBrowserViewController.swift in Sources */,

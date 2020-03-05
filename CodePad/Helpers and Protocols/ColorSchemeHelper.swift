@@ -1,19 +1,17 @@
 //
-//  GlobalConstsHelper.swift
+//  ColorSchemeHelper.swift
 //  CodePad
 //
-//  Created by Ryang Sohn on 2020/02/03.
+//  Created by Ryang Sohn on 2020/03/05.
 //  Copyright © 2020 Ryang Sohn. All rights reserved.
 //
-
-import Foundation
 
 enum ColorSchemeType: Int {
     case light
     case dark
 }
 
-class GlobalConstsHelper {
+class ColorSchemeHelper {
     static let colorSchemes = [
         ("Chrome", ColorSchemeType.light),
         ("Clouds", ColorSchemeType.light),
