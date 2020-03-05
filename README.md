@@ -1,5 +1,6 @@
 # CodePad: a simple code editor for iOS
 
+![Swift v5.0](https://img.shields.io/badge/Swift-5.0-F16D39.svg?style=flat)
 [![GitHub license](https://img.shields.io/github/license/sohnryang/CodePad)](https://github.com/sohnryang/CodePad/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/sohnryang/CodePad)](https://github.com/sohnryang/CodePad/issues)
 [![Build Status](https://travis-ci.com/sohnryang/CodePad.svg?branch=master)](https://travis-ci.com/sohnryang/CodePad)
