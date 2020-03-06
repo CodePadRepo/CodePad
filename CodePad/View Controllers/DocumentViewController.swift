@@ -35,9 +35,7 @@ class DocumentViewController: UIViewController {
     fileprivate func loadSettings() {
         let defaults = UserDefaults.standard
         if let themeIndex = defaults.string(forKey: "colorTheme") {
-            let readableThemeName = ColorSchemeHelper.colorSchemes[Int(themeIndex)!].0
-            let processedThemeName = readableThemeName.replacingOccurrences(of: " ", with: "_").lowercased()
-            self.theme = processedThemeName
+            self.theme = ColorSchemeHelper.colorSchemes[Int(themeIndex)!].aceReadableName
             #if targetEnvironment(simulator)
             print("Color theme set to: \(String(describing: self.theme))")
             #endif
