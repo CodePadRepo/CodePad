@@ -11,7 +11,7 @@ enum ColorSchemeType: Int {
     case dark
 }
 
-struct ColorScheme {
+struct ColorScheme: Equatable {
     var readableName: String
     var aceReadableName: String
     var type: ColorSchemeType
@@ -20,6 +20,10 @@ struct ColorScheme {
         self.readableName = tuple.0
         self.type = tuple.1
         self.aceReadableName = tuple.2
+    }
+    
+    static func == (lhs: ColorScheme, rhs: ColorScheme) -> Bool {
+        return lhs.readableName == rhs.readableName && lhs.aceReadableName == rhs.aceReadableName && lhs.type == rhs.type
     }
 }
 
