@@ -29,12 +29,12 @@ class ColorSchemeConfigViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ColorSchemeHelper.colorSchemes.filter{$0.type.rawValue == section}.count
+        return ColorSchemeProvider.colorSchemes.filter{$0.type.rawValue == section}.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "colorSchemeCell", for: indexPath)
-        cell.textLabel?.text = ColorSchemeHelper.colorSchemes
+        cell.textLabel?.text = ColorSchemeProvider.colorSchemes
             .filter{$0.type.rawValue == indexPath.section}
             .map{$0.readableName}[indexPath.row]
         cell.editingAccessoryType = .checkmark
@@ -42,7 +42,7 @@ class ColorSchemeConfigViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let currentColorScheme = ColorSchemeHelper.colorSchemes.first(where: { $0.aceReadableName == config.colorScheme})!
+        let currentColorScheme = ColorSchemeProvider.colorSchemes.first(where: { $0.aceReadableName == config.colorScheme})!
         if currentColorScheme.readableName == cell.textLabel?.text {
             cell.accessoryType = .checkmark
         } else {
@@ -52,11 +52,11 @@ class ColorSchemeConfigViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let previousColorScheme = ColorSchemeHelper.colorSchemes.first(where: { $0.aceReadableName == config.colorScheme})!
-        let currentColorScheme = ColorSchemeHelper.schemes(forType: ColorSchemeType(rawValue: indexPath.section)!)[indexPath.row]
+        let previousColorScheme = ColorSchemeProvider.colorSchemes.first(where: { $0.aceReadableName == config.colorScheme})!
+        let currentColorScheme = ColorSchemeProvider.schemes(forType: ColorSchemeType(rawValue: indexPath.section)!)[indexPath.row]
         guard previousColorScheme != currentColorScheme else { return }
         
-        if let previousCell = tableView.cellForRow(at: IndexPath(row: Int(ColorSchemeHelper.schemes(forType: previousColorScheme.type).firstIndex(of: previousColorScheme)!), section: previousColorScheme.type.rawValue)) {
+        if let previousCell = tableView.cellForRow(at: IndexPath(row: Int(ColorSchemeProvider.schemes(forType: previousColorScheme.type).firstIndex(of: previousColorScheme)!), section: previousColorScheme.type.rawValue)) {
             previousCell.accessoryType = .none
         }
         

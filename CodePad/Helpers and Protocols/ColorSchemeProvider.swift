@@ -27,7 +27,7 @@ struct ColorScheme: Equatable {
     }
 }
 
-class ColorSchemeHelper {
+class ColorSchemeProvider {
     static let colorSchemes = [
         ColorScheme(("Chrome", ColorSchemeType.light, "chrome")),
         ColorScheme(("Clouds", ColorSchemeType.light, "clouds")),

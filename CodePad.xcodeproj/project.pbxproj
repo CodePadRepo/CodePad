@@ -50,9 +50,9 @@
 		66AF46742402BEDB000391EA /* CodePadConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF46732402BEDB000391EA /* CodePadConfigurationTests.swift */; };
 		66B4131A240FEC37007910F9 /* KeybindingConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */; };
 		66B4131C24113F43007910F9 /* ColorSchemeConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4131B24113F43007910F9 /* ColorSchemeConfigViewController.swift */; };
-		66B4131E241148D0007910F9 /* ColorSchemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4131D241148D0007910F9 /* ColorSchemeHelper.swift */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
 		66F50EFC23F2F53600A02EDE /* MockCodePadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */; };
+		66FA6C5A241376DE00F6E354 /* ColorSchemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FA6C59241376DD00F6E354 /* ColorSchemeProvider.swift */; };
 		66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE439F23EB00A800CBE703 /* URLHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,9 +127,9 @@
 		66AF46732402BEDB000391EA /* CodePadConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadConfigurationTests.swift; sourceTree = "<group>"; };
 		66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybindingConfigViewController.swift; sourceTree = "<group>"; };
 		66B4131B24113F43007910F9 /* ColorSchemeConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeConfigViewController.swift; sourceTree = "<group>"; };
-		66B4131D241148D0007910F9 /* ColorSchemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeHelper.swift; sourceTree = "<group>"; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
 		66DEE444240BFF79006E969D /* CodePad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodePad.entitlements; sourceTree = "<group>"; };
+		66FA6C59241376DD00F6E354 /* ColorSchemeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSchemeProvider.swift; sourceTree = "<group>"; };
 		66FE439F23EB00A800CBE703 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,10 +286,10 @@
 		668BA9AB23EC53ED00C872A9 /* Helpers and Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				66FA6C59241376DD00F6E354 /* ColorSchemeProvider.swift */,
 				66FE439F23EB00A800CBE703 /* URLHelper.swift */,
 				669043CB2401682B009341DF /* ColorBrightnessHelper.swift */,
 				669478B4240A53DD00ACF047 /* NibLoadable.swift */,
-				66B4131D241148D0007910F9 /* ColorSchemeHelper.swift */,
 			);
 			path = "Helpers and Protocols";
 			sourceTree = "<group>";
@@ -540,12 +540,12 @@
 			files = (
 				66FE43A023EB00A800CBE703 /* URLHelper.swift in Sources */,
 				66AF46722402B9B0000391EA /* CodePadConfiguration.swift in Sources */,
+				66FA6C5A241376DE00F6E354 /* ColorSchemeProvider.swift in Sources */,
 				66B4131A240FEC37007910F9 /* KeybindingConfigViewController.swift in Sources */,
 				66307FCE23C4D21100AE7027 /* CodePadDocument.swift in Sources */,
 				66B4131C24113F43007910F9 /* ColorSchemeConfigViewController.swift in Sources */,
 				66AF46702402B678000391EA /* IndentationConfigViewController.swift in Sources */,
 				669478B2240A52FB00ACF047 /* TextInputTableViewCell.swift in Sources */,
-				66B4131E241148D0007910F9 /* ColorSchemeHelper.swift in Sources */,
 				66307FCC23C4D21100AE7027 /* DocumentViewController.swift in Sources */,
 				669043CA24016227009341DF /* ConfigurationViewController.swift in Sources */,
 				66307FCA23C4D21100AE7027 /* DocumentBrowserViewController.swift in Sources */,
