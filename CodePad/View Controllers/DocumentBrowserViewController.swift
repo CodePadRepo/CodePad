@@ -61,6 +61,9 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
             textField.text = defaultDocumentName
             textField.placeholder = "File name"
         })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (_) in
+            importHandler(nil, .none)
+        }))
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
             documentName = alert.textFields?.first?.text ?? defaultDocumentName
             let newDocumentURL = self.createDocumentURL(documentName!)
@@ -79,9 +82,6 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
                     importHandler(newDocumentURL, .move)
                 }
             }
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (_) in
-            importHandler(nil, .none)
         }))
         present(alert, animated: true, completion: nil)
     }
