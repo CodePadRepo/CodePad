@@ -93,10 +93,10 @@ class CodePadConfiguration {
             UserDefaults.standard.setValue(self.themeType.rawValue, forKey: CodePadConfiguration.themeTypeKey)
         }
     }
-    static let fontNameKey = "fontFamily"
-    var fontName: String = "FiraCode-Regular" {
+    static let fontFamilyNameKey = "fontFamilyName"
+    var fontFamilyName: String = "Fira Code" {
         didSet {
-            UserDefaults.standard.setValue(self.fontName, forKey: CodePadConfiguration.fontNameKey)
+            UserDefaults.standard.setValue(self.fontFamilyName, forKey: CodePadConfiguration.fontFamilyNameKey)
         }
     }
     static let fontSizeKey = "fontSize"
@@ -112,7 +112,7 @@ class CodePadConfiguration {
         self.keybindingType = KeybindingType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as? String ?? KeybindingType.vscode.rawValue)!
         self.colorScheme = UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as? String ?? "gruvbox"
         self.themeType = ThemeType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as? String ?? ThemeType.light.rawValue)!
-        self.fontName = UserDefaults.standard.value(forKey: CodePadConfiguration.fontNameKey) as? String ?? "FiraCode-Regular"
+        self.fontFamilyName = UserDefaults.standard.value(forKey: CodePadConfiguration.fontFamilyNameKey) as? String ?? "Fira Code"
         self.fontSize = UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as? Int ?? 12
     }
 }

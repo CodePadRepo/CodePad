@@ -24,14 +24,14 @@ class CodePadConfigurationTests: XCTestCase {
         UserDefaults.standard.set(KeybindingType.ace.rawValue, forKey: CodePadConfiguration.keybindingTypeKey)
         UserDefaults.standard.set("gruvbox", forKey: CodePadConfiguration.colorSchemeKey)
         UserDefaults.standard.set(ThemeType.dark.rawValue, forKey: CodePadConfiguration.themeTypeKey)
-        UserDefaults.standard.set("Inconsolata-Regular", forKey: CodePadConfiguration.fontNameKey)
+        UserDefaults.standard.set("Inconsolata", forKey: CodePadConfiguration.fontFamilyNameKey)
         UserDefaults.standard.set(13, forKey: CodePadConfiguration.fontSizeKey)
         indentationTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         indentationSizeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as! Int)
         keybindingTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as! String)
         colorSchemeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as! String)
         themeTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as! String)
-        fontNameBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.fontNameKey) as! String)
+        fontNameBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.fontFamilyNameKey) as! String)
         fontSizeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as! Int)
     }
 
@@ -45,7 +45,7 @@ class CodePadConfigurationTests: XCTestCase {
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.keybindingTypeKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.colorSchemeKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.themeTypeKey)
-        UserDefaults.standard.removeObject(forKey: CodePadConfiguration.fontNameKey)
+        UserDefaults.standard.removeObject(forKey: CodePadConfiguration.fontFamilyNameKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.fontSizeKey)
     }
 
@@ -56,7 +56,7 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.keybindingType.rawValue, keybindingTypeBeforeTest)
         XCTAssertEqual(conf.colorScheme, colorSchemeBeforeTest)
         XCTAssertEqual(conf.themeType.rawValue, themeTypeBeforeTest)
-        XCTAssertEqual(conf.fontName, fontNameBeforeTest)
+        XCTAssertEqual(conf.fontFamilyName, fontNameBeforeTest)
         XCTAssertEqual(conf.fontSize, fontSizeBeforeTest)
         conf.indentationType = .tabs
         XCTAssertEqual(conf.indentationType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
@@ -68,8 +68,8 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.colorScheme, UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as! String)
         conf.themeType = .light
         XCTAssertEqual(conf.themeType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as! String)
-        conf.fontName = "Hack-Regular"
-        XCTAssertEqual(conf.fontName, UserDefaults.standard.value(forKey: CodePadConfiguration.fontNameKey) as! String)
+        conf.fontFamilyName = "Hack"
+        XCTAssertEqual(conf.fontFamilyName, UserDefaults.standard.value(forKey: CodePadConfiguration.fontFamilyNameKey) as! String)
         conf.fontSize = 15
         XCTAssertEqual(conf.fontSize, UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as! Int)
     }
@@ -109,7 +109,7 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.keybindingType, KeybindingType.vscode)
         XCTAssertEqual(conf.colorScheme, "gruvbox")
         XCTAssertEqual(conf.themeType, ThemeType.light)
-        XCTAssertEqual(conf.fontName, "FiraCode-Regular")
+        XCTAssertEqual(conf.fontFamilyName, "Fira Code")
         XCTAssertEqual(conf.fontSize, 12)
     }
 }
