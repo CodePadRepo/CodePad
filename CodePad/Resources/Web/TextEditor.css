@@ -20,3 +20,97 @@ body {
     right: 0;
     margin: 0;
 }
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    src: url("FantasqueSansMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    src: url("FantasqueSansMono-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    src: url("FantasqueSansMono-Italic.ttf");
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    src: url("FantasqueSansMono-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("FiraCode-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("FiraCode-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Hack";
+    src: url("Hack-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Hack";
+    src: url("Hack-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Hack";
+    src: url("Hack-Italic.ttf");
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: "Hack";
+    src: url("Hack-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url("Inconsolata-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url("Inconsolata-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Meslo LG M";
+    src: url("MesloLGM-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Meslo LG M";
+    src: url("MesloLGM-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Meslo LG M";
+    src: url("MesloLGM-Italic.ttf");
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: "Meslo LG M";
+    src: url("MesloLGM-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
