@@ -57,6 +57,11 @@ enum KeybindingType: String {
     }
 }
 
+enum ThemeType: String {
+    case light
+    case dark
+}
+
 class CodePadConfiguration {
     static let indentationTypeKey = "indentationType"
     var indentationType: IndentationType = .spaces {
@@ -82,11 +87,18 @@ class CodePadConfiguration {
             UserDefaults.standard.setValue(self.colorScheme, forKeyPath: CodePadConfiguration.colorSchemeKey)
         }
     }
+    static let themeTypeKey = "themeType"
+    var themeType: ThemeType = .light {
+        didSet {
+            UserDefaults.standard.setValue(self.themeType.rawValue, forKeyPath: CodePadConfiguration.themeTypeKey)
+        }
+    }
     
     init() {
         self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as? String ?? IndentationType.spaces.rawValue)!
         self.indentationSize = UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as? Int ?? 4
         self.keybindingType = KeybindingType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as? String ?? KeybindingType.vscode.rawValue)!
         self.colorScheme = UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as? String ?? "gruvbox"
+        self.themeType = ThemeType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as? String ?? ThemeType.light.rawValue)!
     }
 }
