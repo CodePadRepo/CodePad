@@ -50,6 +50,7 @@
 		66AF46742402BEDB000391EA /* CodePadConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF46732402BEDB000391EA /* CodePadConfigurationTests.swift */; };
 		66B4131A240FEC37007910F9 /* KeybindingConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */; };
 		66B4131C24113F43007910F9 /* ColorSchemeConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4131B24113F43007910F9 /* ColorSchemeConfigViewController.swift */; };
+		66B4132424137239007910F9 /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B4132324137239007910F9 /* FontProvider.swift */; };
 		66C976EB23DDCB990084E2EE /* ace_src in Resources */ = {isa = PBXBuildFile; fileRef = 66C976EA23DDCB990084E2EE /* ace_src */; };
 		66F50EFC23F2F53600A02EDE /* MockCodePadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */; };
 		66FA6C5A241376DE00F6E354 /* ColorSchemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FA6C59241376DD00F6E354 /* ColorSchemeProvider.swift */; };
@@ -127,6 +128,7 @@
 		66AF46732402BEDB000391EA /* CodePadConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadConfigurationTests.swift; sourceTree = "<group>"; };
 		66B41319240FEC37007910F9 /* KeybindingConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybindingConfigViewController.swift; sourceTree = "<group>"; };
 		66B4131B24113F43007910F9 /* ColorSchemeConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeConfigViewController.swift; sourceTree = "<group>"; };
+		66B4132324137239007910F9 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
 		66C976EA23DDCB990084E2EE /* ace_src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ace_src; sourceTree = "<group>"; };
 		66DEE444240BFF79006E969D /* CodePad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodePad.entitlements; sourceTree = "<group>"; };
 		66FA6C59241376DD00F6E354 /* ColorSchemeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSchemeProvider.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				66FE439F23EB00A800CBE703 /* URLHelper.swift */,
 				669043CB2401682B009341DF /* ColorBrightnessHelper.swift */,
 				669478B4240A53DD00ACF047 /* NibLoadable.swift */,
+				66B4132324137239007910F9 /* FontProvider.swift */,
 			);
 			path = "Helpers and Protocols";
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				669478B5240A53DD00ACF047 /* NibLoadable.swift in Sources */,
 				669043CC2401682B009341DF /* ColorBrightnessHelper.swift in Sources */,
 				66307FC823C4D21100AE7027 /* AppDelegate.swift in Sources */,
+				66B4132424137239007910F9 /* FontProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
