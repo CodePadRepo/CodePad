@@ -6,7 +6,6 @@ initializeEditor = (theme, filename, editorContent, indentSize, indentType, keyb
     const mode = modelist.getModeForPath(filename).mode
     editor.session.setOptions({
         tabSize: indentSize,
-        showInvisibles: true,
         useSoftTabs: Boolean(indentType)
     });
     if (keybindingType != "ace") {
