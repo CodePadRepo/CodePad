@@ -66,43 +66,43 @@ class CodePadConfiguration {
     static let indentationTypeKey = "indentationType"
     var indentationType: IndentationType = .spaces {
         didSet {
-            UserDefaults.standard.setValue(self.indentationType.rawValue, forKeyPath: CodePadConfiguration.indentationTypeKey)
+            UserDefaults.standard.setValue(self.indentationType.rawValue, forKey: CodePadConfiguration.indentationTypeKey)
         }
     }
     static let indentationSizeKey = "indentationSize"
     var indentationSize: Int = 4 {
         didSet {
-            UserDefaults.standard.setValue(indentationSize, forKeyPath: CodePadConfiguration.indentationSizeKey)
+            UserDefaults.standard.setValue(indentationSize, forKey: CodePadConfiguration.indentationSizeKey)
         }
     }
     static let keybindingTypeKey = "keybindingType"
     var keybindingType: KeybindingType = .vscode {
         didSet {
-            UserDefaults.standard.setValue(self.keybindingType.rawValue, forKeyPath: CodePadConfiguration.keybindingTypeKey)
+            UserDefaults.standard.setValue(self.keybindingType.rawValue, forKey: CodePadConfiguration.keybindingTypeKey)
         }
     }
     static let colorSchemeKey = "colorScheme"
     var colorScheme: String = "gruvbox" {
         didSet {
-            UserDefaults.standard.setValue(self.colorScheme, forKeyPath: CodePadConfiguration.colorSchemeKey)
+            UserDefaults.standard.setValue(self.colorScheme, forKey: CodePadConfiguration.colorSchemeKey)
         }
     }
     static let themeTypeKey = "themeType"
     var themeType: ThemeType = .light {
         didSet {
-            UserDefaults.standard.setValue(self.themeType.rawValue, forKeyPath: CodePadConfiguration.themeTypeKey)
+            UserDefaults.standard.setValue(self.themeType.rawValue, forKey: CodePadConfiguration.themeTypeKey)
         }
     }
     static let fontNameKey = "fontFamily"
     var fontName: String = "FiraCode-Regular" {
         didSet {
-            UserDefaults.standard.setValue(self.fontName, forKeyPath: CodePadConfiguration.fontNameKey)
+            UserDefaults.standard.setValue(self.fontName, forKey: CodePadConfiguration.fontNameKey)
         }
     }
     static let fontSizeKey = "fontSize"
     var fontSize: Int = 12 {
         didSet {
-            UserDefaults.standard.setValue(self.fontSize, forKeyPath: CodePadConfiguration.fontSizeKey)
+            UserDefaults.standard.setValue(self.fontSize, forKey: CodePadConfiguration.fontSizeKey)
         }
     }
     
