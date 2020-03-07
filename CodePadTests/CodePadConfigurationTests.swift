@@ -17,6 +17,7 @@ class CodePadConfigurationTests: XCTestCase {
     var themeTypeBeforeTest: String!
     var fontNameBeforeTest: String!
     var fontSizeBeforeTest: Int!
+    var ligatureEnabledBeforeTest: Bool!
 
     override func setUp() {
         UserDefaults.standard.set(IndentationType.spaces.rawValue, forKey: CodePadConfiguration.indentationTypeKey)
@@ -26,6 +27,7 @@ class CodePadConfigurationTests: XCTestCase {
         UserDefaults.standard.set(ThemeType.dark.rawValue, forKey: CodePadConfiguration.themeTypeKey)
         UserDefaults.standard.set("Inconsolata", forKey: CodePadConfiguration.fontFamilyNameKey)
         UserDefaults.standard.set(13, forKey: CodePadConfiguration.fontSizeKey)
+        UserDefaults.standard.set(false, forKey: CodePadConfiguration.ligatureEnabledKey)
         indentationTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         indentationSizeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as! Int)
         keybindingTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as! String)
@@ -33,6 +35,7 @@ class CodePadConfigurationTests: XCTestCase {
         themeTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as! String)
         fontNameBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.fontFamilyNameKey) as! String)
         fontSizeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as! Int)
+        ligatureEnabledBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.ligatureEnabledKey) as! Bool)
     }
 
     override func tearDown() {
@@ -47,6 +50,7 @@ class CodePadConfigurationTests: XCTestCase {
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.themeTypeKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.fontFamilyNameKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.fontSizeKey)
+        UserDefaults.standard.removeObject(forKey: CodePadConfiguration.ligatureEnabledKey)
     }
 
     func testCodePadConfiguration() {
@@ -58,6 +62,7 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.themeType.rawValue, themeTypeBeforeTest)
         XCTAssertEqual(conf.fontFamilyName, fontNameBeforeTest)
         XCTAssertEqual(conf.fontSize, fontSizeBeforeTest)
+        XCTAssertEqual(conf.ligatureEnabled, ligatureEnabledBeforeTest)
         conf.indentationType = .tabs
         XCTAssertEqual(conf.indentationType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         conf.indentationSize = 2
@@ -72,6 +77,8 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.fontFamilyName, UserDefaults.standard.value(forKey: CodePadConfiguration.fontFamilyNameKey) as! String)
         conf.fontSize = 15
         XCTAssertEqual(conf.fontSize, UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as! Int)
+        conf.ligatureEnabled = true
+        XCTAssertEqual(conf.ligatureEnabled, UserDefaults.standard.value(forKey: CodePadConfiguration.ligatureEnabledKey) as! Bool)
     }
     
     func testIndentationType() {
@@ -111,5 +118,6 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.themeType, ThemeType.light)
         XCTAssertEqual(conf.fontFamilyName, "Fira Code")
         XCTAssertEqual(conf.fontSize, 12)
+        XCTAssertEqual(conf.ligatureEnabled, true)
     }
 }

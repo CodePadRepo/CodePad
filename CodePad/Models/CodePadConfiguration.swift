@@ -105,6 +105,12 @@ class CodePadConfiguration {
             UserDefaults.standard.setValue(self.fontSize, forKey: CodePadConfiguration.fontSizeKey)
         }
     }
+    static let ligatureEnabledKey = "ligatureEnabled"
+    var ligatureEnabled: Bool = true {
+        didSet {
+            UserDefaults.standard.set(self.ligatureEnabled, forKey: CodePadConfiguration.ligatureEnabledKey)
+        }
+    }
     
     init() {
         self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as? String ?? IndentationType.spaces.rawValue)!
@@ -114,5 +120,6 @@ class CodePadConfiguration {
         self.themeType = ThemeType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as? String ?? ThemeType.light.rawValue)!
         self.fontFamilyName = UserDefaults.standard.value(forKey: CodePadConfiguration.fontFamilyNameKey) as? String ?? "Fira Code"
         self.fontSize = UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as? Int ?? 12
+        self.ligatureEnabled = UserDefaults.standard.value(forKey: CodePadConfiguration.ligatureEnabledKey) as? Bool ?? true
     }
 }
