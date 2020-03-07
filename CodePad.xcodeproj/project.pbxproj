@@ -32,7 +32,6 @@
 		66307FD623C4D21300AE7027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66307FD423C4D21300AE7027 /* LaunchScreen.storyboard */; };
 		66307FE123C4D21300AE7027 /* CodePadDocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66307FE023C4D21300AE7027 /* CodePadDocumentTests.swift */; };
 		6647EC6623F19FE0004053D3 /* CodePadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647EC6523F19FE0004053D3 /* CodePadUITests.swift */; };
-		664C718A23E6B1C0005FEBC0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 664C718923E6B1C0005FEBC0 /* Settings.bundle */; };
 		665C0FA023DAC05600E29BA4 /* TextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 665C0F9F23DAC05600E29BA4 /* TextEditor.html */; };
 		665C0FA423DAC56100E29BA4 /* TextEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 665C0FA323DAC56100E29BA4 /* TextEditor.css */; };
 		665C0FA723DAD13B00E29BA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C0FA623DAD13B00E29BA4 /* WebKit.framework */; };
@@ -94,7 +93,6 @@
 		663C9735240A376700936392 /* CI Test Plan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CI Test Plan.xctestplan"; sourceTree = "<group>"; };
 		6647EC6123F19E54004053D3 /* MockCodePadDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCodePadDocument.swift; sourceTree = "<group>"; };
 		6647EC6523F19FE0004053D3 /* CodePadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePadUITests.swift; sourceTree = "<group>"; };
-		664C718923E6B1C0005FEBC0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		665C0F9F23DAC05600E29BA4 /* TextEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = TextEditor.html; sourceTree = "<group>"; };
 		665C0FA323DAC56100E29BA4 /* TextEditor.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = TextEditor.css; sourceTree = "<group>"; };
 		665C0FA623DAD13B00E29BA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -173,7 +171,6 @@
 		66307FBB23C4D21100AE7027 = {
 			isa = PBXGroup;
 			children = (
-				664C718923E6B1C0005FEBC0 /* Settings.bundle */,
 				66307FF923C4D27D00AE7027 /* README.md */,
 				66307FC623C4D21100AE7027 /* CodePad */,
 				669478AD240A38F500ACF047 /* Test Plans */,
@@ -471,7 +468,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				661B18AD23FC0E1F003486C5 /* FiraCode-Regular.ttf in Resources */,
-				664C718A23E6B1C0005FEBC0 /* Settings.bundle in Resources */,
 				661B18B123FC0E1F003486C5 /* Hack-Regular.ttf in Resources */,
 				661B18AE23FC0E1F003486C5 /* Hack-Bold.ttf in Resources */,
 				66307FD623C4D21300AE7027 /* LaunchScreen.storyboard in Resources */,
