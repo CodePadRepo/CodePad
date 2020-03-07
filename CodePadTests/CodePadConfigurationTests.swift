@@ -16,6 +16,7 @@ class CodePadConfigurationTests: XCTestCase {
     var colorSchemeBeforeTest: String!
     var themeTypeBeforeTest: String!
     var fontNameBeforeTest: String!
+    var fontSizeBeforeTest: Int!
 
     override func setUp() {
         UserDefaults.standard.set(IndentationType.spaces.rawValue, forKey: CodePadConfiguration.indentationTypeKey)
@@ -24,12 +25,14 @@ class CodePadConfigurationTests: XCTestCase {
         UserDefaults.standard.set("gruvbox", forKey: CodePadConfiguration.colorSchemeKey)
         UserDefaults.standard.set(ThemeType.dark.rawValue, forKey: CodePadConfiguration.themeTypeKey)
         UserDefaults.standard.set("Inconsolata-Regular", forKey: CodePadConfiguration.fontNameKey)
+        UserDefaults.standard.set(13, forKey: CodePadConfiguration.fontSizeKey)
         indentationTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         indentationSizeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.indentationSizeKey) as! Int)
         keybindingTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.keybindingTypeKey) as! String)
         colorSchemeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as! String)
         themeTypeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as! String)
         fontNameBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.fontNameKey) as! String)
+        fontSizeBeforeTest = (UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as! Int)
     }
 
     override func tearDown() {
@@ -43,6 +46,7 @@ class CodePadConfigurationTests: XCTestCase {
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.colorSchemeKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.themeTypeKey)
         UserDefaults.standard.removeObject(forKey: CodePadConfiguration.fontNameKey)
+        UserDefaults.standard.removeObject(forKey: CodePadConfiguration.fontSizeKey)
     }
 
     func testCodePadConfiguration() {
@@ -53,6 +57,7 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.colorScheme, colorSchemeBeforeTest)
         XCTAssertEqual(conf.themeType.rawValue, themeTypeBeforeTest)
         XCTAssertEqual(conf.fontName, fontNameBeforeTest)
+        XCTAssertEqual(conf.fontSize, fontSizeBeforeTest)
         conf.indentationType = .tabs
         XCTAssertEqual(conf.indentationType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as! String)
         conf.indentationSize = 2
@@ -65,6 +70,8 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.themeType.rawValue, UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as! String)
         conf.fontName = "Hack-Regular"
         XCTAssertEqual(conf.fontName, UserDefaults.standard.value(forKey: CodePadConfiguration.fontNameKey) as! String)
+        conf.fontSize = 15
+        XCTAssertEqual(conf.fontSize, UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as! Int)
     }
     
     func testIndentationType() {
@@ -103,5 +110,6 @@ class CodePadConfigurationTests: XCTestCase {
         XCTAssertEqual(conf.colorScheme, "gruvbox")
         XCTAssertEqual(conf.themeType, ThemeType.light)
         XCTAssertEqual(conf.fontName, "FiraCode-Regular")
+        XCTAssertEqual(conf.fontSize, 12)
     }
 }

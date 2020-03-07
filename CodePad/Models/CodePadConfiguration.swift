@@ -99,6 +99,12 @@ class CodePadConfiguration {
             UserDefaults.standard.setValue(self.fontName, forKeyPath: CodePadConfiguration.fontNameKey)
         }
     }
+    static let fontSizeKey = "fontSize"
+    var fontSize: Int = 12 {
+        didSet {
+            UserDefaults.standard.setValue(self.fontSize, forKeyPath: CodePadConfiguration.fontSizeKey)
+        }
+    }
     
     init() {
         self.indentationType = IndentationType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.indentationTypeKey) as? String ?? IndentationType.spaces.rawValue)!
@@ -107,5 +113,6 @@ class CodePadConfiguration {
         self.colorScheme = UserDefaults.standard.value(forKey: CodePadConfiguration.colorSchemeKey) as? String ?? "gruvbox"
         self.themeType = ThemeType(rawValue: UserDefaults.standard.value(forKey: CodePadConfiguration.themeTypeKey) as? String ?? ThemeType.light.rawValue)!
         self.fontName = UserDefaults.standard.value(forKey: CodePadConfiguration.fontNameKey) as? String ?? "FiraCode-Regular"
+        self.fontSize = UserDefaults.standard.value(forKey: CodePadConfiguration.fontSizeKey) as? Int ?? 12
     }
 }
