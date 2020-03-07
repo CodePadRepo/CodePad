@@ -105,7 +105,7 @@ class DocumentViewController: UIViewController {
     
     fileprivate func initializeEditor() {
         let filename = self.document!.fileURL.lastPathComponent
-        self.webView.evaluateJavaScript("initializeEditor('\(config.colorScheme)', '\(filename)', `\(document!.code.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "`", with: "\\`"))`, \(config.indentationSize), \(config.indentationType.ordinal()), '\(config.keybindingType.rawValue)')") { (result, error) in
+        self.webView.evaluateJavaScript("initializeEditor('\(config.colorScheme)', '\(filename)', `\(document!.code.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "`", with: "\\`"))`, \(config.indentationSize), \(config.indentationType.ordinal()), '\(config.keybindingType.rawValue)', '\(config.fontFamilyName)', \(config.fontSize))") { (result, error) in
             if error != nil {
                 #if targetEnvironment(simulator)
                 print("Failed to initialize editor")
