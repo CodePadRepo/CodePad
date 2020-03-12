@@ -9,7 +9,7 @@
 
 ## What?
 
-CodePad is a simple code editor for iOS. It is currently work-in-progress.
+CodePad is a simple code editor for iOS. It is currently work-in-progress, and based on [Ace editor](https://ace.c9.io/) for now, but will be replaced with custom-built navive editor engine.
 
 ## Features and Roadmap
 
@@ -19,6 +19,7 @@ CodePad is a simple code editor for iOS. It is currently work-in-progress.
 - [x] Syntax highlighting
 - [x] Filetype detection for syntax highlighting
 - [ ] Configuration menus
+- [ ] Implement custom editor engine and ditch Ace editor
 - [ ] Start beta testing
 
 ### `P0.5`: Not necessary, but needed for long-term maintenance
