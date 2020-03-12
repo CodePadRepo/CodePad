@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class DocumentViewController: UIViewController {
+class DocumentViewController: UIViewController, FontConfigurable {
     var document: CodePadDocument?
     var config: CodePadConfiguration!
     var webView: WKWebView!
@@ -54,6 +54,7 @@ class DocumentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FontProvider.shared.register(observer: self)
         prepareWebView()
         loadSettings()
         setNavbar()
@@ -122,6 +123,13 @@ class DocumentViewController: UIViewController {
     
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
         scrollView.pinchGestureRecognizer?.isEnabled = false
+    }
+    
+    func apply(font: UIFont) {
+        #if targetEnvironment(simulator)
+        print("Applying font: \(font.familyName)")
+        #endif
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: font.fontName, size: 17)!]
     }
 }
 

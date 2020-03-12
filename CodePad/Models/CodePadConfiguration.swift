@@ -97,6 +97,7 @@ class CodePadConfiguration {
     var fontFamilyName: String = "Fira Code" {
         didSet {
             UserDefaults.standard.setValue(self.fontFamilyName, forKey: CodePadConfiguration.fontFamilyNameKey)
+            FontProvider.shared.font = FontProvider.fonts.first(where: { $0.familyName == self.fontFamilyName })!
         }
     }
     static let fontSizeKey = "fontSize"
