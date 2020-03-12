@@ -17,16 +17,14 @@ class FontConfigViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "Font"
-        } else if section == 1 {
-            return "Font Size"
         } else {
-            return "Ligatures"
+            return "Font Size"
         }
     }
     
@@ -49,10 +47,6 @@ class FontConfigViewController: UITableViewController {
             textInputCell.textInput.placeholder = "Font size"
             textInputCell.selectionStyle = .none
             return textInputCell
-        } else {
-            cell.textLabel?.text = "Turn on Ligatures"
-            cell.accessoryView = UISwitch()
-            cell.selectionStyle = .none
         }
         return cell
     }
@@ -68,10 +62,6 @@ class FontConfigViewController: UITableViewController {
             let textInputCell = cell as! TextInputTableViewCell
             textInputCell.textInput.text = String(config.fontSize)
             textInputCell.textInput.addTarget(self, action: #selector(fontSizeEdited), for: UIControl.Event.editingChanged)
-        } else {
-            let ligatureSwitch = cell.accessoryView as! UISwitch
-            ligatureSwitch.isOn = config.ligatureEnabled
-            ligatureSwitch.addTarget(self, action: #selector(ligatureSettingEdited), for: UIControl.Event.allTouchEvents)
         }
     }
     
