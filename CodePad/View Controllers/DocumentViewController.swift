@@ -13,6 +13,7 @@ class DocumentViewController: UIViewController, FontConfigurable {
     var document: CodePadDocument?
     var config: CodePadConfiguration!
     var webView: WKWebView!
+    var editorReady = false
 
     fileprivate func prepareWebView() {
         let conf = WKWebViewConfiguration()
@@ -130,6 +131,12 @@ class DocumentViewController: UIViewController, FontConfigurable {
         print("Applying font: \(font.familyName)")
         #endif
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: font.fontName, size: 17)!]
+        guard editorReady else { return }
+        self.webView.evaluateJavaScript("updateFont('\(font.familyName)');") { (result, error) in
+            if error != nil {
+                fatalError("Could not apply font to editor")
+            }
+        }
     }
 }
 
@@ -167,6 +174,7 @@ extension DocumentViewController: WKScriptMessageHandler {
                     #endif
                     self.initializeEditor()
                 })
+                editorReady = true
             case "text_change":
                 let fileContents: String = data["fileContent"] as! String
                 self.document!.code = fileContents

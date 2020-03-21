@@ -1,9 +1,13 @@
 modelist = ace.require("ace/ext/modelist");
 
-initializeEditor = (theme, filename, editorContent, indentSize, indentType, keybindingType, fontFamilyName, fontSize) => {
+updateFont = (fontFamilyName, fontSize) => {
     const editorElem = document.querySelector("#editor");
     editorElem.style.setProperty("font-family", fontFamilyName, "important");
     editorElem.style.setProperty("font-size", `${fontSize}pt`, "important");
+};
+
+initializeEditor = (theme, filename, editorContent, indentSize, indentType, keybindingType, fontFamilyName, fontSize) => {
+    updateFont(fontFamilyName, fontSize);
     
     editor = ace.edit("editor");
     editor.setTheme(`ace/theme/${theme}`);
