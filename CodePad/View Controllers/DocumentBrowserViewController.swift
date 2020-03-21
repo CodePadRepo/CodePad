@@ -97,6 +97,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     }
     
     func documentBrowser(_ controller: UIDocumentBrowserViewController, failedToImportDocumentAt documentURL: URL, error: Error?) {
+        fatalError("Cannot import file: \(error.debugDescription)")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
